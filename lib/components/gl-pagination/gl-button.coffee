@@ -1,4 +1,4 @@
-`import paginationButtonTemplate from '../templates/gl-pagination-button'`
+`import paginationButtonTemplate from '../../templates/gl-pagination/gl-button'`
 
 PaginationButton = Ember.Component.extend
   tagName: 'li'

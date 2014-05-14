@@ -1,4 +1,4 @@
-`import PaginationButton from './gl-pagination-button'`
+`import PaginationButton from './gl-button'`
 
 Pagination = Ember.CollectionView.extend
   tagName: 'ul'
