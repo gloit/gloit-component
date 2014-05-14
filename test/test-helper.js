@@ -4,8 +4,8 @@ emq.globalize();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:gl-login-form': gloit.GloitLoginFormComponent,
-    'template:components/gl-login-form': gloit.GloitLoginFormTemplate
+    'component:gl-login-form': gloit.LoginFormComponent,
+    'template:components/gl-login-form': gloit.LoginFormTemplate
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
