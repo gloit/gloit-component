@@ -1,8 +1,8 @@
-`import paginationButtonTemplate from '../../templates/gl-pagination/gl-button'`
+`import layout from '../../templates/gl-pagination/gl-button'`
 
 PaginationButton = Ember.Component.extend
   tagName: 'li'
-  template: paginationButtonTemplate
+  layout: layout
 
   classNameBindings: ['disabled:disabled', 'active:active']
 
