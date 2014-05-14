@@ -1,7 +1,7 @@
 LoginForm = Ember.Component.extend
   classNames: ['gl-login-form']
 
-  title: 'Sign in'
+  title: '用户登录'
   copyright: '&copy; 2011-2014'
 
   registerable: false
