@@ -6,7 +6,9 @@ setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
     'component:gl-login-form': gloit.LoginFormComponent,
     'template:components/gl-login-form': gloit.LoginFormTemplate,
-    'component:gl-pagination': gloit.PaginationComponent
+    'component:gl-pagination': gloit.PaginationComponent,
+    'template:components/gl-sidebar': gloit.SidebarTemplate,
+    'component:gl-sidebar': gloit.SidebarComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
