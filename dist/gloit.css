@@ -331,11 +331,6 @@ form .form-group.buttons button.btn:first-of-type {
   height: 100%;
   line-height: 42px;
   text-align: center;
-  /*.border-radius(100%);*/
-  /*background-color: @white;*/
-  /*.title {*/
-  /*display: none;*/
-  /*}*/
 }
 .gl-sidebar .gl-navigator .menu-items ul li a > div img {
   width: 14px;
@@ -452,6 +447,9 @@ form .form-group.buttons button.btn:first-of-type {
 .gl-sidebar-expanded .gl-navigator .menu-trigger li:hover {
   background: #40a6ff !important;
 }
+.gl-sidebar-expanded .gl-navigator .menu-trigger li i {
+  color: #ffffff;
+}
 .gl-sidebar-expanded .gl-navigator .menu-triggers > li a .title {
   display: inline-block;
   color: #ffffff;
@@ -483,6 +481,9 @@ form .form-group.buttons button.btn:first-of-type {
 .gl-sidebar-expanded .gl-navigator .menu-items ul li a > div img,
 .gl-sidebar-expanded .gl-navigator .menu-items ul li a > div i {
   margin: 14px 0;
+}
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a > div i {
+  color: #ffffff;
 }
 .gl-sidebar-expanded .gl-navigator .menu-items ul li a:hover {
   background: #40a6ff !important;
