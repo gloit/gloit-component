@@ -43,7 +43,7 @@ lib = filterCoffeeScript(lib, {
 lib = filterES6Modules(lib, {
   global:      'gloit',
   packageName: 'gloit',
-  main:        'main',
+  main:        'gloit',
 
   shim: {
     ember:      'Ember',
