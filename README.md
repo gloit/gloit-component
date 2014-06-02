@@ -38,7 +38,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
     <script type="text/javascript" src="http://cdn.staticfile.org/select2/3.4.6/select2_locale_zh-CN.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script> 
-    <script type="text/javascript" src="http://gloit.github.com/dist/globals/main.js"></script> 
+    <script type="text/javascript" src="http://gloit.github.com/dist/globals/gloit.js"></script> 
   </body>
 </html>
 ```
