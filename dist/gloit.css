@@ -450,6 +450,9 @@ form .form-group.buttons button.btn:first-of-type {
 .gl-sidebar-expanded .gl-navigator .menu-triggers li i {
   color: #ffffff;
 }
+.gl-sidebar-expanded .gl-navigator .menu-triggers li.active {
+  background: #40a6ff !important;
+}
 .gl-sidebar-expanded .gl-navigator .menu-triggers > li a .title {
   display: inline-block;
   color: #ffffff;
