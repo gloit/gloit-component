@@ -183,9 +183,12 @@
       li {
         background: none !important;
         &:hover {
-          background: lighten(@blue, 20%) !important
+          background: lighten(@blue, 20%) !important;
         }
         i { color: @white; }
+      }
+      li.active {
+        background: lighten(@blue, 20%) !important;
       }
     }
     .menu-triggers > li a .title {
