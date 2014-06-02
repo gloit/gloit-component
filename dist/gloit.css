@@ -1,0 +1,625 @@
+/* Colors defined by http://clrs.cc/ */
+/* Overrides bootstrap variables */
+form {
+  overflow: hidden;
+}
+form h2 {
+  margin: 0px 0px 20px 0px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #dddddd;
+}
+form h4 {
+  padding-left: 30px;
+}
+form input,
+form select {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 10px 0px;
+  display: block;
+  border: none;
+  margin: 0;
+  width: 100%;
+}
+form select {
+  border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 36px;
+  background: #ffffff;
+}
+form .form-group.buttons {
+  border: none;
+}
+form .form-group.buttons button.btn {
+  margin-top: 30px;
+  margin-right: 5px;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+form .form-group.buttons button.btn:first-of-type {
+  margin-left: 15px;
+}
+.form-horizontal .form-group {
+  margin: -1px 30px 0px 30px;
+  border: 1px solid #dddddd;
+}
+.form-horizontal .control-label {
+  padding-top: 0;
+  padding-right: 15px;
+  background: #f7f7f7;
+  line-height: 36px;
+}
+.form-horizontal .form-control {
+  border: none;
+  border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.form-horizontal .form-control-static {
+  padding: 6px 12px;
+  line-height: 24px;
+}
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12 {
+  padding: 0;
+}
+.gl-login-form .main {
+  padding: 60px 0 30px;
+}
+.gl-login-form .login {
+  width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  border-top: #ff851b 5px solid;
+  /* Set the background */
+  background-color: #0074d9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074d9), color-stop(100% #001f3f));
+  background-image: -webkit-linear-gradient(top, #0074d9 0%, #001f3f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0074d9), to(#001f3f));
+  background-image: linear-gradient(top, #0074d9 0%, #001f3f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0074d9, endColorstr=#001f3f);
+  /*IE<9>*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@blue, endColorstr=@navy)";
+  /*IE8+*/
+  color: #aaaaaa;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.gl-login-form .login p a {
+  color: #ffffff;
+}
+.gl-login-form .login h1 {
+  color: #aaaaaa;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #001f3f;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
+  box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
+}
+.gl-login-form .login .float {
+  width: 50%;
+  float: left;
+  padding-top: 15px;
+  margin-right: 0px;
+}
+.gl-login-form .login label {
+  color: #ffffff;
+  display: block;
+  padding: 0 0 5px 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.gl-login-form .login label i {
+  margin-right: 5px;
+  display: inline-block;
+  width: 10px;
+}
+.gl-login-form .login input[type=text],
+.gl-login-form .login input[type=password] {
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #dddddd;
+  color: #111111;
+}
+.gl-login-form .login button,
+.gl-login-form .login a.btn {
+  color: #ffffff;
+  padding: 5px 20px;
+}
+.gl-login-form .login input[type=checkbox] {
+  margin-top: 0px;
+}
+.gl-login-form .browsers {
+  margin: 0 auto;
+}
+.gl-login-form .browsers ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.gl-login-form .browsers ul li {
+  display: inline-block;
+}
+.gl-login-form .browsers ul li a {
+  width: 100px;
+  margin: 0;
+}
+.gl-login-form .browsers ul li a div {
+  width: 100px;
+}
+.gl-login-form .browsers ul li img {
+  width: 64px;
+  height: 64px;
+}
+.select2-container {
+  width: 100%;
+}
+.select2-container .select2-choice {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0;
+  height: 36px;
+  line-height: 36px;
+  background-image: none;
+}
+.select2-container .select2-choice .select2-arrow {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-left: 1px solid #dddddd;
+  background-image: none;
+  background-color: #f7f7f7;
+}
+.select2-container .select2-choice .select2-arrow b {
+  -webkit-background-size: 60px 60px !important;
+  background-size: 60px 60px !important;
+}
+.select2-drop {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.select2-drop .select2-search input {
+  margin-top: 4px;
+  border: 1px solid #dddddd;
+}
+.select2-container-multi .select2-choices .select2-search-field input {
+  padding: 6px 12px;
+}
+.select2-drop.select2-drop-above {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.select2-drop-active {
+  border: 1px solid #dddddd !important;
+}
+.select2-dropdown-open .select2-choice {
+  background-color: #ffffff;
+}
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0;
+  height: 36px;
+  line-height: 36px;
+  background-color: #ffffff;
+  background-image: none;
+}
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  line-height: inherit;
+}
+.select2-container-multi .select2-choices {
+  border: 0;
+  background-image: none;
+}
+.select2-container-multi.select2-container-active .select2-choices {
+  border: 0;
+}
+.select2-container-multi .select2-choices .select2-search-choice {
+  border-radius: 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin: 7px 0 7px 8px;
+  border: 1px solid #dddddd;
+  background-image: none;
+  background-color: #f7f7f7;
+}
+.select2-container-multi .select2-choices .select2-search-field input {
+  padding: 7px 8px !important;
+}
+.gl-sidebar {
+  background: #0074d9;
+  float: left;
+  height: 100%;
+  width: 100px;
+}
+.gl-sidebar .brand {
+  height: 60px;
+  width: inherit;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  font-style: italic;
+  background-color: #1c578f;
+}
+.gl-sidebar .brand .logo {
+  height: 40px;
+}
+.gl-sidebar .brand .logo a {
+  color: #ffffff;
+}
+.gl-sidebar .brand .logo img {
+  width: 40px;
+  height: 40px;
+}
+.gl-sidebar .brand .switch-button {
+  display: none;
+  width: 60px;
+  height: 40px;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 40px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.gl-sidebar .brand .switch-button:before {
+  content: '\f060';
+  font-family: 'FontAwesome';
+}
+.gl-sidebar .brand .switch-button:after {
+  content: '\f061';
+  font-family: 'FontAwesome';
+}
+.gl-sidebar .brand:hover .logo {
+  display: none;
+}
+.gl-sidebar .brand:hover .switch-button {
+  display: inline-block;
+}
+.gl-sidebar .navigator {
+  width: inherit;
+}
+.gl-sidebar .navigator .menu-items {
+  margin: 0 !important;
+  width: inherit;
+  overflow: hidden;
+}
+.gl-sidebar .navigator .menu-items ul {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0 !important;
+  padding: 0;
+  display: none;
+  list-style-type: none;
+}
+.gl-sidebar .navigator .menu-items ul li {
+  height: 60px;
+  cursor: pointer;
+}
+.gl-sidebar .navigator .menu-items ul li a {
+  display: block;
+}
+.gl-sidebar .navigator .menu-items ul li a > div {
+  height: 100%;
+  line-height: 42px;
+  text-align: center;
+  /*.border-radius(100%);*/
+  /*background-color: @white;*/
+  /*.title {*/
+  /*display: none;*/
+  /*}*/
+}
+.gl-sidebar .navigator .menu-items ul li a > div img {
+  width: 14px;
+  height: 14px;
+}
+.gl-sidebar .navigator .menu-items ul li a:hover {
+  background-color: #40a6ff;
+}
+.gl-sidebar .navigator .menu-items ul li a.active {
+  background-color: #40a6ff;
+}
+.gl-sidebar .navigator .menu-items ul.active {
+  display: block;
+}
+.gl-sidebar .navigator .menu-triggers {
+  margin: 0;
+  background-color: #1c578f;
+  padding: 15px 20px;
+  width: inherit;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gl-sidebar .navigator .menu-triggers > li {
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  cursor: pointer;
+}
+.gl-sidebar .navigator .menu-triggers > li a {
+  display: block;
+  position: relative;
+}
+.gl-sidebar .navigator .menu-triggers > li a img.menu-trigger {
+  width: 14px;
+  height: 14px;
+}
+.gl-sidebar .navigator .menu-triggers > li a .title {
+  display: none;
+}
+.gl-sidebar .navigator .menu-triggers > li:last-child {
+  margin-bottom: 0;
+  line-height: 40px;
+  text-align: center;
+}
+.gl-sidebar .navigator .menu-triggers > li.active,
+.gl-sidebar .navigator .menu-triggers li:hover {
+  background-color: #40a6ff;
+}
+.gl-sidebar .starter {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 20px 20px;
+  width: inherit;
+  height: 90px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  cursor: pointer;
+  background: #1c578f;
+}
+.gl-sidebar .starter > a.home {
+  height: 60px;
+  display: block;
+  border-radius: 100%;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #1c578f;
+}
+.gl-sidebar .starter > a.home:hover {
+  background: #398bd8 !important;
+}
+.gl-sidebar .starter ul.dropdown-menu {
+  position: absolute;
+  top: 20px;
+  left: 102px;
+  text-align: left;
+}
+.gl-sidebar .starter i {
+  margin: 0;
+}
+.gl-sidebar-expanded {
+  width: 200px;
+}
+.gl-sidebar-expanded .brand {
+  padding: 10px 20px;
+}
+.gl-sidebar-expanded .brand .logo {
+  float: left;
+}
+.gl-sidebar-expanded .brand .switch-button {
+  float: right;
+  display: block;
+}
+.gl-sidebar-expanded .brand .switch-button:before {
+  content: '\f061';
+  font-family: 'FontAwesome';
+}
+.gl-sidebar-expanded .brand .switch-button:after {
+  content: '\f060';
+  font-family: 'FontAwesome';
+}
+.gl-sidebar-expanded .brand:hover .logo,
+.gl-sidebar-expanded .brand:hover .switch-button {
+  display: inline-block;
+}
+.gl-sidebar-expanded .navigator .menu-trigger li {
+  background: none !important;
+}
+.gl-sidebar-expanded .navigator .menu-trigger li:hover {
+  background: #40a6ff !important;
+}
+.gl-sidebar-expanded .navigator .menu-triggers > li a .title {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li {
+  padding: 0;
+  height: 42px;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a {
+  width: 100%;
+  height: 42px;
+  padding: 0;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a > div {
+  padding: 0 20px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  line-height: 42px;
+  text-align: left;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a > div .title {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a > div img,
+.gl-sidebar-expanded .navigator .menu-items ul li a > div i {
+  margin: 14px 0;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a:hover {
+  background: #40a6ff !important;
+}
+.gl-sidebar-expanded .navigator .menu-items ul li a.active {
+  background: #40a6ff !important;
+}
+.gl-sidebar-expanded .starter {
+  padding: 10px 68px 20px;
+}
+.gl-sidebar-expanded .starter ul.dropdown-menu {
+  left: 202px;
+}
+.gl-sidelist {
+  position: relative;
+  float: left;
+  height: 100%;
+  overflow: auto;
+  background: #f7f7f7;
+  border-right: 1px solid #dddddd;
+}
+.gl-sidelist-item {
+  position: absolute;
+  width: 100%;
+  min-height: 45px;
+  background: #ffffff;
+}
+.gl-sidelist-item a {
+  border-top: 5px #2ecc40 solid;
+  display: block;
+  padding-left: 30px;
+  line-height: 40px;
+}
+.gl-sidelist-item a:hover {
+  border-top: 5px #ffdc00 solid;
+}
+.gl-sidelist-item a.active {
+  border-top-color: #ff851b;
+}
+.gl-table-top-bar {
+  height: 30px;
+  padding: 5px 8px;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+}
+.gl-table-top-bar a {
+  margin-right: 15px;
+}
+.gl-table-top-bar a:last-of-type {
+  margin-right: 0;
+}
+.gl-table-head {
+  background: #f7f7f7;
+}
+.gl-table-head td.gl-table-head-cell {
+  font-weight: bold;
+  min-width: 100px;
+}
+.gl-table-body td.index,
+.gl-table-body td.selection-cell {
+  text-align: center;
+  background: #f7f7f7;
+}
+.table-clickable tbody tr {
+  cursor: pointer;
+}
+.gl-main-toolbar {
+  background-color: #0074d9;
+  width: 100%;
+  height: 60px;
+}
+.gl-main-toolbar ol.breadcrumb {
+  margin: 0 30px;
+  padding: 0;
+  background: none;
+  line-height: 60px;
+}
+.gl-main-toolbar ol.breadcrumb li {
+  margin-right: 10px;
+  float: left;
+  color: #dddddd;
+}
+.gl-main-toolbar ol.breadcrumb li:before {
+  color: #ffffff;
+  content: "\f105";
+  font-family: 'FontAwesome';
+  float: left;
+  padding-right: 3px;
+}
+.gl-main-toolbar ol.breadcrumb li:last-of-type {
+  color: #dddddd;
+  float: left;
+}
+.gl-main-toolbar ol.breadcrumb li:last-of-type:before {
+  color: #dddddd;
+  padding-right: 3px;
+  float: left;
+}
+.gl-main-toolbar ol.breadcrumb a {
+  color: #ffffff;
+}
+ul.gl-toolbar-links {
+  list-style-type: none;
+  margin: 0;
+  margin-top: -60px;
+  background: #0074d9;
+}
+ul.gl-toolbar-links > li {
+  float: left;
+  color: #ffffff;
+}
+ul.gl-toolbar-links > li > a {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  font-weight: bold;
+  border-left: 1px solid #40a6ff;
+  color: #ffffff;
+}
+ul.gl-toolbar-links > li > a i {
+  margin-right: 10px;
+}
+ul.gl-toolbar-links > li > a:hover {
+  background-color: #001f3f;
+}
+html,
+body {
+  height: 100%;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.tooltip {
+  min-width: 100px !important;
+}
+i {
+  margin-right: 5px;
+}
