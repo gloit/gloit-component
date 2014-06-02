@@ -258,7 +258,7 @@ form .form-group.buttons button.btn:first-of-type {
   height: 100%;
   width: 100px;
 }
-.gl-sidebar .brand {
+.gl-sidebar .gl-brand {
   height: 60px;
   width: inherit;
   padding: 10px;
@@ -270,17 +270,17 @@ form .form-group.buttons button.btn:first-of-type {
   font-style: italic;
   background-color: #1c578f;
 }
-.gl-sidebar .brand .logo {
+.gl-sidebar .gl-brand .logo {
   height: 40px;
 }
-.gl-sidebar .brand .logo a {
+.gl-sidebar .gl-brand .logo a {
   color: #ffffff;
 }
-.gl-sidebar .brand .logo img {
+.gl-sidebar .gl-brand .logo img {
   width: 40px;
   height: 40px;
 }
-.gl-sidebar .brand .switch-button {
+.gl-sidebar .gl-brand .switch-button {
   display: none;
   width: 60px;
   height: 40px;
@@ -290,29 +290,29 @@ form .form-group.buttons button.btn:first-of-type {
   font-weight: normal;
   cursor: pointer;
 }
-.gl-sidebar .brand .switch-button:before {
+.gl-sidebar .gl-brand .switch-button:before {
   content: '\f060';
   font-family: 'FontAwesome';
 }
-.gl-sidebar .brand .switch-button:after {
+.gl-sidebar .gl-brand .switch-button:after {
   content: '\f061';
   font-family: 'FontAwesome';
 }
-.gl-sidebar .brand:hover .logo {
+.gl-sidebar .gl-brand:hover .logo {
   display: none;
 }
-.gl-sidebar .brand:hover .switch-button {
+.gl-sidebar .gl-brand:hover .switch-button {
   display: inline-block;
 }
-.gl-sidebar .navigator {
+.gl-sidebar .gl-navigator {
   width: inherit;
 }
-.gl-sidebar .navigator .menu-items {
+.gl-sidebar .gl-navigator .menu-items {
   margin: 0 !important;
   width: inherit;
   overflow: hidden;
 }
-.gl-sidebar .navigator .menu-items ul {
+.gl-sidebar .gl-navigator .menu-items ul {
   height: 100%;
   overflow-y: auto;
   margin: 0 !important;
@@ -320,14 +320,14 @@ form .form-group.buttons button.btn:first-of-type {
   display: none;
   list-style-type: none;
 }
-.gl-sidebar .navigator .menu-items ul li {
+.gl-sidebar .gl-navigator .menu-items ul li {
   height: 60px;
   cursor: pointer;
 }
-.gl-sidebar .navigator .menu-items ul li a {
+.gl-sidebar .gl-navigator .menu-items ul li a {
   display: block;
 }
-.gl-sidebar .navigator .menu-items ul li a > div {
+.gl-sidebar .gl-navigator .menu-items ul li a > div {
   height: 100%;
   line-height: 42px;
   text-align: center;
@@ -337,20 +337,20 @@ form .form-group.buttons button.btn:first-of-type {
   /*display: none;*/
   /*}*/
 }
-.gl-sidebar .navigator .menu-items ul li a > div img {
+.gl-sidebar .gl-navigator .menu-items ul li a > div img {
   width: 14px;
   height: 14px;
 }
-.gl-sidebar .navigator .menu-items ul li a:hover {
+.gl-sidebar .gl-navigator .menu-items ul li a:hover {
   background-color: #40a6ff;
 }
-.gl-sidebar .navigator .menu-items ul li a.active {
+.gl-sidebar .gl-navigator .menu-items ul li a.active {
   background-color: #40a6ff;
 }
-.gl-sidebar .navigator .menu-items ul.active {
+.gl-sidebar .gl-navigator .menu-items ul.active {
   display: block;
 }
-.gl-sidebar .navigator .menu-triggers {
+.gl-sidebar .gl-navigator .menu-triggers {
   margin: 0;
   background-color: #1c578f;
   padding: 15px 20px;
@@ -360,7 +360,7 @@ form .form-group.buttons button.btn:first-of-type {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.gl-sidebar .navigator .menu-triggers > li {
+.gl-sidebar .gl-navigator .menu-triggers > li {
   height: 40px;
   margin-bottom: 10px;
   text-align: center;
@@ -368,27 +368,27 @@ form .form-group.buttons button.btn:first-of-type {
   line-height: 40px;
   cursor: pointer;
 }
-.gl-sidebar .navigator .menu-triggers > li a {
+.gl-sidebar .gl-navigator .menu-triggers > li a {
   display: block;
   position: relative;
 }
-.gl-sidebar .navigator .menu-triggers > li a img.menu-trigger {
+.gl-sidebar .gl-navigator .menu-triggers > li a img.menu-trigger {
   width: 14px;
   height: 14px;
 }
-.gl-sidebar .navigator .menu-triggers > li a .title {
+.gl-sidebar .gl-navigator .menu-triggers > li a .title {
   display: none;
 }
-.gl-sidebar .navigator .menu-triggers > li:last-child {
+.gl-sidebar .gl-navigator .menu-triggers > li:last-child {
   margin-bottom: 0;
   line-height: 40px;
   text-align: center;
 }
-.gl-sidebar .navigator .menu-triggers > li.active,
-.gl-sidebar .navigator .menu-triggers li:hover {
+.gl-sidebar .gl-navigator .menu-triggers > li.active,
+.gl-sidebar .gl-navigator .menu-triggers li:hover {
   background-color: #40a6ff;
 }
-.gl-sidebar .starter {
+.gl-sidebar .gl-starter {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -401,7 +401,7 @@ form .form-group.buttons button.btn:first-of-type {
   cursor: pointer;
   background: #1c578f;
 }
-.gl-sidebar .starter > a.home {
+.gl-sidebar .gl-starter > a.home {
   height: 60px;
   display: block;
   border-radius: 100%;
@@ -409,65 +409,65 @@ form .form-group.buttons button.btn:first-of-type {
   background-clip: padding-box;
   background: #1c578f;
 }
-.gl-sidebar .starter > a.home:hover {
+.gl-sidebar .gl-starter > a.home:hover {
   background: #398bd8 !important;
 }
-.gl-sidebar .starter ul.dropdown-menu {
+.gl-sidebar .gl-starter ul.dropdown-menu {
   position: absolute;
   top: 20px;
   left: 102px;
   text-align: left;
 }
-.gl-sidebar .starter i {
+.gl-sidebar .gl-starter i {
   margin: 0;
 }
 .gl-sidebar-expanded {
   width: 200px;
 }
-.gl-sidebar-expanded .brand {
+.gl-sidebar-expanded .gl-brand {
   padding: 10px 20px;
 }
-.gl-sidebar-expanded .brand .logo {
+.gl-sidebar-expanded .gl-brand .logo {
   float: left;
 }
-.gl-sidebar-expanded .brand .switch-button {
+.gl-sidebar-expanded .gl-brand .switch-button {
   float: right;
   display: block;
 }
-.gl-sidebar-expanded .brand .switch-button:before {
+.gl-sidebar-expanded .gl-brand .switch-button:before {
   content: '\f061';
   font-family: 'FontAwesome';
 }
-.gl-sidebar-expanded .brand .switch-button:after {
+.gl-sidebar-expanded .gl-brand .switch-button:after {
   content: '\f060';
   font-family: 'FontAwesome';
 }
-.gl-sidebar-expanded .brand:hover .logo,
-.gl-sidebar-expanded .brand:hover .switch-button {
+.gl-sidebar-expanded .gl-brand:hover .logo,
+.gl-sidebar-expanded .gl-brand:hover .switch-button {
   display: inline-block;
 }
-.gl-sidebar-expanded .navigator .menu-trigger li {
+.gl-sidebar-expanded .gl-navigator .menu-trigger li {
   background: none !important;
 }
-.gl-sidebar-expanded .navigator .menu-trigger li:hover {
+.gl-sidebar-expanded .gl-navigator .menu-trigger li:hover {
   background: #40a6ff !important;
 }
-.gl-sidebar-expanded .navigator .menu-triggers > li a .title {
+.gl-sidebar-expanded .gl-navigator .menu-triggers > li a .title {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
   margin-left: 20px;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li {
   padding: 0;
   height: 42px;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a {
   width: 100%;
   height: 42px;
   padding: 0;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a > div {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a > div {
   padding: 0 20px;
   width: 100%;
   border: none;
@@ -475,25 +475,25 @@ form .form-group.buttons button.btn:first-of-type {
   line-height: 42px;
   text-align: left;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a > div .title {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a > div .title {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a > div img,
-.gl-sidebar-expanded .navigator .menu-items ul li a > div i {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a > div img,
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a > div i {
   margin: 14px 0;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a:hover {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a:hover {
   background: #40a6ff !important;
 }
-.gl-sidebar-expanded .navigator .menu-items ul li a.active {
+.gl-sidebar-expanded .gl-navigator .menu-items ul li a.active {
   background: #40a6ff !important;
 }
-.gl-sidebar-expanded .starter {
+.gl-sidebar-expanded .gl-starter {
   padding: 10px 68px 20px;
 }
-.gl-sidebar-expanded .starter ul.dropdown-menu {
+.gl-sidebar-expanded .gl-starter ul.dropdown-menu {
   left: 202px;
 }
 .gl-sidelist {
@@ -546,7 +546,7 @@ form .form-group.buttons button.btn:first-of-type {
   text-align: center;
   background: #f7f7f7;
 }
-.table-clickable tbody tr {
+.gl-table-clickable tbody tr {
   cursor: pointer;
 }
 .gl-main-toolbar {
