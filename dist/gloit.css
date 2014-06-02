@@ -441,13 +441,13 @@ form .form-group.buttons button.btn:first-of-type {
 .gl-sidebar-expanded .gl-brand:hover .switch-button {
   display: inline-block;
 }
-.gl-sidebar-expanded .gl-navigator .menu-trigger li {
+.gl-sidebar-expanded .gl-navigator .menu-triggers li {
   background: none !important;
 }
-.gl-sidebar-expanded .gl-navigator .menu-trigger li:hover {
+.gl-sidebar-expanded .gl-navigator .menu-triggers li:hover {
   background: #40a6ff !important;
 }
-.gl-sidebar-expanded .gl-navigator .menu-trigger li i {
+.gl-sidebar-expanded .gl-navigator .menu-triggers li i {
   color: #ffffff;
 }
 .gl-sidebar-expanded .gl-navigator .menu-triggers > li a .title {
