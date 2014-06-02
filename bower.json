@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": [
     "dist/gloit.css",
-    "dist/globals/main.js"
+    "dist/globals/gloit.js"
   ],
   "authors": [
     "Tower He <towerhe@gmail.com>"
