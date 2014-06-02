@@ -51,4 +51,10 @@ lib = filterES6Modules(lib, {
   }
 });
 
-module.exports = mergeTrees([lib, styles]);
+var extraAssets = pickFiles('images', {
+   srcDir: '/',
+   files: ['**/*'],
+   destDir: '/images'
+});
+
+module.exports = mergeTrees([lib, styles, extraAssets]);
