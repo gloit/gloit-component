@@ -41,7 +41,7 @@ lib = filterCoffeeScript(lib, {
 });
 
 lib = filterES6Modules(lib, {
-  global:      'gloit',
+  global:      'Gloit',
   packageName: 'gloit',
   main:        'gloit',
 
