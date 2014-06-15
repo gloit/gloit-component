@@ -403,6 +403,7 @@ form .form-group.buttons button.btn:first-of-type {
   border-radius: 100%;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  color: #0074d9;
   background: #003d73;
 }
 .gl-sidebar .gl-starter > a.home:hover {
@@ -612,7 +613,7 @@ ul.gl-toolbar-links > li > a i {
   margin-right: 10px;
 }
 ul.gl-toolbar-links > li > a:hover {
-  background-color: #001f3f;
+  background-color: #003d73;
 }
 html,
 body {
