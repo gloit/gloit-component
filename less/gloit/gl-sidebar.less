@@ -1,5 +1,5 @@
 .gl-sidebar {
-  background: @blue;
+  background: @base-color;
   float: left;
   height: 100%;
   width: 100px;
@@ -14,7 +14,7 @@
     line-height: 40px;
     font-size: 24px;
     font-style: italic;
-    background-color: @deep-blue;
+    background-color: lighten(@base-color, -20%);
     .logo {
       a { color: @white; }
       height: 40px;
@@ -76,10 +76,10 @@
               }
             }
             &:hover {
-              background-color: lighten(@blue, 20%);
+              background-color: lighten(@base-color, 20%);
             }
             &.active {
-              background-color: lighten(@blue, 20%);
+              background-color: lighten(@base-color, 20%);
             }
           }
         }
@@ -90,7 +90,7 @@
     }
     .menu-triggers {
       margin: 0;
-      background-color: @deep-blue;
+      background-color: lighten(@base-color, -20%);
       padding: 15px 20px;
       width: inherit;
       list-style-type: none;
@@ -120,7 +120,7 @@
         text-align: center;
       }
       > li.active, li:hover {
-        background-color: lighten(@blue, 20%);
+        background-color: lighten(@base-color, 20%);
       }
     }
   }
@@ -134,14 +134,14 @@
     vertical-align: middle;
     line-height: 60px;
     cursor: pointer;
-    background: @deep-blue;
+    background: lighten(@base-color, -20%);
     > a.home {
       height: 60px;
       display: block;
       .border-radius(100%);
-      background: @deep-blue;
+      background: lighten(@base-color, -20%);
       &:hover {
-        background: lighten(@deep-blue, 20%) !important;
+        background: @base-color !important;
       }
     }
     ul.dropdown-menu {
@@ -183,12 +183,12 @@
       li {
         background: none !important;
         &:hover {
-          background: lighten(@blue, 20%) !important;
+          background: lighten(@base-color, 20%) !important;
         }
         i { color: @white; }
       }
       li.active {
-        background: lighten(@blue, 20%) !important;
+        background: lighten(@base-color, 20%) !important;
       }
     }
     .menu-triggers > li a .title {
@@ -222,10 +222,10 @@
           i { color: @white; }
         }
         &:hover {
-          background: lighten(@blue, 20%) !important;
+          background: lighten(@base-color, 20%) !important;
         }
         &.active {
-          background: lighten(@blue, 20%) !important;
+          background: lighten(@base-color, 20%) !important;
         }
       }
     }
