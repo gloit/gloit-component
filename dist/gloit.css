@@ -88,13 +88,13 @@ form .form-group.buttons button.btn:first-of-type {
   border-top: #ff851b 5px solid;
   /* Set the background */
   background-color: #0074d9;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074d9), color-stop(100% #0074d9));
-  background-image: -webkit-linear-gradient(top, #0074d9 0%, #0074d9 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0074d9), to(#0074d9));
-  background-image: linear-gradient(top, #0074d9 0%, #0074d9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0074d9, endColorstr=#0074d9);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074d9), color-stop(100% #003d73));
+  background-image: -webkit-linear-gradient(top, #0074d9 0%, #003d73 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0074d9), to(#003d73));
+  background-image: linear-gradient(top, #0074d9 0%, #003d73 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0074d9, endColorstr=#003d73);
   /*IE<9>*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=@base-color)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";
   /*IE8+*/
   color: #aaaaaa;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -106,7 +106,7 @@ form .form-group.buttons button.btn:first-of-type {
 .gl-login-form .login h1 {
   color: #aaaaaa;
   padding-bottom: 8px;
-  border-bottom: 1px solid #001f3f;
+  border-bottom: 1px solid #003d73;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
   box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);

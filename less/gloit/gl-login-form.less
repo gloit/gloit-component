@@ -9,9 +9,9 @@
     border-top: @orange 5px solid;
 
     /* Set the background */
-    .gradient(@base-color, @base-color, @base-color);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=@base-color); /*IE<9>*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=@base-color)";/*IE8+*/
+    .gradient(@base-color, @base-color, lighten(@base-color, -20%));
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%)); /*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";/*IE8+*/
 
     color: @gray;
     .box-shadow(0 0 5px rgba(0, 0, 0, .5));
@@ -23,7 +23,7 @@
     h1 {
       color: @gray;
       padding-bottom: 8px;
-      border-bottom: 1px solid @navy;
+      border-bottom: 1px solid lighten(@base-color, -20%);
       text-shadow: 0 1px 0 rgba(255,255,255,0.8);
       .box-shadow(0 1px 0 rgba(195, 248, 255, 0.80));
     }
