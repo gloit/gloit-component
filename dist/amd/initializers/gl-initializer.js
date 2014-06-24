@@ -1,6 +1,6 @@
 define(
-  ["../components/gl-datetime-picker","../components/gl-login-form","../templates/gl-login-form","../components/gl-main-toolbar","../templates/gl-main-toolbar","../components/gl-pagination/gl-pagination","../components/gl-sidebar/gl-sidebar","../templates/gl-sidebar","../components/gl-table/gl-table","../templates/gl-table","../components/gl-sidelist/gl-sidelist","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __exports__) {
+  ["../components/gl-datetime-picker","../components/gl-login-form","../templates/gl-login-form","../components/gl-main-toolbar","../templates/gl-main-toolbar","../components/gl-pagination/gl-pagination","../components/gl-sidebar/gl-sidebar","../templates/gl-sidebar","../components/gl-table/gl-table","../templates/gl-table","../components/gl-sidelist/gl-sidelist","../components/gl-select2","../components/gl-tagging-select2","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -19,6 +19,9 @@ define(
     var TableTemplate = __dependency10__["default"] || __dependency10__;
 
     var SidelistComponent = __dependency11__["default"] || __dependency11__;
+
+    var Select2Component = __dependency12__["default"] || __dependency12__;
+    var TaggingSelect2Component = __dependency13__["default"] || __dependency13__;
 
     __exports__["default"] = {
       name: 'gloit',
@@ -41,6 +44,9 @@ define(
         container.register('component:gl-table', TableComponent);
 
         container.register('component:gl-sidelist', SidelistComponent);
+
+        container.register('component:gl-select2', Select2Component);
+        container.register('component:gl-tagging-select2', TaggingSelect2Component);
       }
     };
   });

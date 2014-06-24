@@ -18,6 +18,9 @@ var TableTemplate = require("./templates/gl-table")["default"] || require("./tem
 
 var SidelistComponent = require("./components/gl-sidelist/gl-sidelist")["default"] || require("./components/gl-sidelist/gl-sidelist");
 
+var Select2Component = require("./components/gl-select2")["default"] || require("./components/gl-select2");
+var TaggingSelect2Component = require("./components/gl-tagging-select2")["default"] || require("./components/gl-tagging-select2");
+
 var GloitInitializer = require("./initializers/gl-initializer")["default"] || require("./initializers/gl-initializer");
 
 Ember.Application.initializer(GloitInitializer);
@@ -49,3 +52,5 @@ exports.TableColumnModel = TableColumnModel;
 exports.TableTemplate = TableTemplate;
 exports.TableComponent = TableComponent;
 exports.SidelistComponent = SidelistComponent;
+exports.Select2Component = Select2Component;
+exports.TaggingSelect2Component = TaggingSelect2Component;

@@ -104,7 +104,7 @@ PaginationButton = Ember.Component.extend({
 });
 
 exports["default"] = PaginationButton;
-},{"../../templates/gl-pagination/gl-button":32}],5:[function(_dereq_,module,exports){
+},{"../../templates/gl-pagination/gl-button":34}],5:[function(_dereq_,module,exports){
 "use strict";
 var PaginationButton = _dereq_("./gl-button")["default"] || _dereq_("./gl-button");
 var Pagination;
@@ -187,6 +187,39 @@ Pagination = Ember.CollectionView.extend({
 exports["default"] = Pagination;
 },{"./gl-button":4}],6:[function(_dereq_,module,exports){
 "use strict";
+var Select2;
+
+Select2 = Ember.Select.extend({
+  classNames: ['gl-select2'],
+  placeholder: '请选择...',
+  allowClear: true,
+  closeOnSelect: true,
+  minimumInputLength: 0,
+  maximumSelectionSize: 0,
+  selectedDidChange: (function() {
+    return this.$().select2('val', this.$().val());
+  }).observes('selection.@each'),
+  didInsertElement: function() {
+    return Ember.run.scheduleOnce('afterRender', this, 'processChildElements');
+  },
+  processChildElements: function() {
+    var options;
+    options = {};
+    options.placeholder = this.get('prompt') || this.get('placeholder');
+    options.allowClear = this.get('allowClear');
+    options.closeOnSelect = this.get('closeOnSelect');
+    options.minimumInputLength = this.get('minimumInputLength');
+    options.maximumSelectionSize = this.get('maximumSelectionSize');
+    return this.$().select2(options);
+  },
+  willDestroyElement: function() {
+    return this.$().select2('destroy');
+  }
+});
+
+exports["default"] = Select2;
+},{}],7:[function(_dereq_,module,exports){
+"use strict";
 var layout = _dereq_("../../templates/gl-sidebar/gl-starter")["default"] || _dereq_("../../templates/gl-sidebar/gl-starter");
 var Starter;
 
@@ -197,7 +230,7 @@ Starter = Ember.Component.extend({
 });
 
 exports["default"] = Starter;
-},{"../../templates/gl-sidebar/gl-starter":36}],7:[function(_dereq_,module,exports){
+},{"../../templates/gl-sidebar/gl-starter":38}],8:[function(_dereq_,module,exports){
 "use strict";
 var layout = _dereq_("../../templates/gl-sidebar/gl-brand")["default"] || _dereq_("../../templates/gl-sidebar/gl-brand");
 var Brand;
@@ -217,7 +250,7 @@ Brand = Ember.Component.extend({
 });
 
 exports["default"] = Brand;
-},{"../../templates/gl-sidebar/gl-brand":34}],8:[function(_dereq_,module,exports){
+},{"../../templates/gl-sidebar/gl-brand":36}],9:[function(_dereq_,module,exports){
 "use strict";
 var layout = _dereq_("../../templates/gl-sidebar/gl-navigator")["default"] || _dereq_("../../templates/gl-sidebar/gl-navigator");
 var Navigator;
@@ -244,7 +277,7 @@ Navigator = Ember.Component.extend({
 });
 
 exports["default"] = Navigator;
-},{"../../templates/gl-sidebar/gl-navigator":35}],9:[function(_dereq_,module,exports){
+},{"../../templates/gl-sidebar/gl-navigator":37}],10:[function(_dereq_,module,exports){
 "use strict";
 var Brand = _dereq_("./gl-brand")["default"] || _dereq_("./gl-brand");
 var Navigator = _dereq_("./gl-navigator")["default"] || _dereq_("./gl-navigator");
@@ -276,7 +309,7 @@ Sidebar = Ember.Component.extend({
 });
 
 exports["default"] = Sidebar;
-},{"./gl-Starter":6,"./gl-brand":7,"./gl-navigator":8}],10:[function(_dereq_,module,exports){
+},{"./gl-Starter":7,"./gl-brand":8,"./gl-navigator":9}],11:[function(_dereq_,module,exports){
 "use strict";
 var Item;
 
@@ -285,7 +318,7 @@ Item = Ember.ListItemView.extend({
 });
 
 exports["default"] = Item;
-},{}],11:[function(_dereq_,module,exports){
+},{}],12:[function(_dereq_,module,exports){
 "use strict";
 var Item = _dereq_("./gl-item")["default"] || _dereq_("./gl-item");
 var Sidelist;
@@ -300,7 +333,7 @@ Sidelist = Ember.ListView.extend({
 });
 
 exports["default"] = Sidelist;
-},{"./gl-item":10}],12:[function(_dereq_,module,exports){
+},{"./gl-item":11}],13:[function(_dereq_,module,exports){
 "use strict";
 var Action = _dereq_("./gl-action")["default"] || _dereq_("./gl-action");
 var ActionGroup;
@@ -311,7 +344,7 @@ ActionGroup = Ember.CollectionView.extend({
 });
 
 exports["default"] = ActionGroup;
-},{"./gl-action":13}],13:[function(_dereq_,module,exports){
+},{"./gl-action":14}],14:[function(_dereq_,module,exports){
 "use strict";
 var layout = _dereq_("../../templates/gl-table/gl-action")["default"] || _dereq_("../../templates/gl-table/gl-action");
 var Action;
@@ -322,7 +355,7 @@ Action = Ember.Component.extend({
 });
 
 exports["default"] = Action;
-},{"../../templates/gl-table/gl-action":38}],14:[function(_dereq_,module,exports){
+},{"../../templates/gl-table/gl-action":40}],15:[function(_dereq_,module,exports){
 "use strict";
 var Row = _dereq_("./gl-row")["default"] || _dereq_("./gl-row");
 var MultipleSelectableRow = _dereq_("./gl-multiple-selectable-row")["default"] || _dereq_("./gl-multiple-selectable-row");
@@ -353,7 +386,7 @@ Body = Ember.CollectionView.extend({
 });
 
 exports["default"] = Body;
-},{"./gl-multiple-selectable-row":20,"./gl-row":21,"./gl-single-selectable-row":24}],15:[function(_dereq_,module,exports){
+},{"./gl-multiple-selectable-row":21,"./gl-row":22,"./gl-single-selectable-row":25}],16:[function(_dereq_,module,exports){
 "use strict";
 var styleBindings = _dereq_("../../mixins/style-bindings")["default"] || _dereq_("../../mixins/style-bindings");
 var Cell;
@@ -392,7 +425,7 @@ Cell = Ember.Component.extend(styleBindings, {
 });
 
 exports["default"] = Cell;
-},{"../../mixins/style-bindings":29}],16:[function(_dereq_,module,exports){
+},{"../../mixins/style-bindings":31}],17:[function(_dereq_,module,exports){
 "use strict";
 var ColumnModel;
 
@@ -405,7 +438,7 @@ ColumnModel = Ember.Object.extend({
 });
 
 exports["default"] = ColumnModel;
-},{}],17:[function(_dereq_,module,exports){
+},{}],18:[function(_dereq_,module,exports){
 "use strict";
 var styleBindings = _dereq_("../../mixins/style-bindings")["default"] || _dereq_("../../mixins/style-bindings");
 var HeadCell;
@@ -426,7 +459,7 @@ HeadCell = Ember.Component.extend(styleBindings, {
 });
 
 exports["default"] = HeadCell;
-},{"../../mixins/style-bindings":29}],18:[function(_dereq_,module,exports){
+},{"../../mixins/style-bindings":31}],19:[function(_dereq_,module,exports){
 "use strict";
 var HeadCell = _dereq_("./gl-head-cell")["default"] || _dereq_("./gl-head-cell");
 var SelectAllCell = _dereq_("./gl-select-all-cell")["default"] || _dereq_("./gl-select-all-cell");
@@ -461,7 +494,7 @@ HeadRow = Ember.CollectionView.extend({
 });
 
 exports["default"] = HeadRow;
-},{"./gl-head-cell":17,"./gl-select-all-cell":22}],19:[function(_dereq_,module,exports){
+},{"./gl-head-cell":18,"./gl-select-all-cell":23}],20:[function(_dereq_,module,exports){
 "use strict";
 var HeadRow = _dereq_("./gl-head-row")["default"] || _dereq_("./gl-head-row");
 var Head;
@@ -475,7 +508,7 @@ Head = Ember.CollectionView.extend({
 });
 
 exports["default"] = Head;
-},{"./gl-head-row":18}],20:[function(_dereq_,module,exports){
+},{"./gl-head-row":19}],21:[function(_dereq_,module,exports){
 "use strict";
 var SelectableRow = _dereq_("./gl-selectable-row")["default"] || _dereq_("./gl-selectable-row");
 var layout = _dereq_("../../templates/gl-table/gl-multiple-selectable-row")["default"] || _dereq_("../../templates/gl-table/gl-multiple-selectable-row");
@@ -487,7 +520,7 @@ MultipleSelectableRow = SelectableRow.extend({
 });
 
 exports["default"] = MultipleSelectableRow;
-},{"../../templates/gl-table/gl-multiple-selectable-row":39,"./gl-selectable-row":23}],21:[function(_dereq_,module,exports){
+},{"../../templates/gl-table/gl-multiple-selectable-row":41,"./gl-selectable-row":24}],22:[function(_dereq_,module,exports){
 "use strict";
 var Cell = _dereq_("./gl-cell")["default"] || _dereq_("./gl-cell");
 var layout = _dereq_("../../templates/gl-table/gl-row")["default"] || _dereq_("../../templates/gl-table/gl-row");
@@ -507,7 +540,7 @@ Row = Ember.Component.extend({
 });
 
 exports["default"] = Row;
-},{"../../templates/gl-table/gl-row":40,"./gl-cell":15}],22:[function(_dereq_,module,exports){
+},{"../../templates/gl-table/gl-row":42,"./gl-cell":16}],23:[function(_dereq_,module,exports){
 "use strict";
 var HeadCell = _dereq_("./gl-head-cell")["default"] || _dereq_("./gl-head-cell");
 var layout = _dereq_("../../templates/gl-table/gl-select-all-cell")["default"] || _dereq_("../../templates/gl-table/gl-select-all-cell");
@@ -529,7 +562,7 @@ SelectAllCell = HeadCell.extend({
 });
 
 exports["default"] = SelectAllCell;
-},{"../../templates/gl-table/gl-select-all-cell":41,"./gl-head-cell":17}],23:[function(_dereq_,module,exports){
+},{"../../templates/gl-table/gl-select-all-cell":43,"./gl-head-cell":18}],24:[function(_dereq_,module,exports){
 "use strict";
 var Row = _dereq_("./gl-row")["default"] || _dereq_("./gl-row");
 var SelectableRow;
@@ -551,7 +584,7 @@ SelectableRow = Row.extend({
 });
 
 exports["default"] = SelectableRow;
-},{"./gl-row":21}],24:[function(_dereq_,module,exports){
+},{"./gl-row":22}],25:[function(_dereq_,module,exports){
 "use strict";
 var SelectableRow = _dereq_("./gl-selectable-row")["default"] || _dereq_("./gl-selectable-row");
 var SingleSelectableRow;
@@ -568,7 +601,7 @@ SingleSelectableRow = SelectableRow.extend({
 });
 
 exports["default"] = SingleSelectableRow;
-},{"./gl-selectable-row":23}],25:[function(_dereq_,module,exports){
+},{"./gl-selectable-row":24}],26:[function(_dereq_,module,exports){
 "use strict";
 var Action = _dereq_("./gl-action")["default"] || _dereq_("./gl-action");
 var ActionGroup = _dereq_("./gl-action-group")["default"] || _dereq_("./gl-action-group");
@@ -637,7 +670,7 @@ Table = Ember.Component.extend({
 });
 
 exports["default"] = Table;
-},{"./gl-action":13,"./gl-action-group":12,"./gl-body":14,"./gl-head":19,"./gl-topbar":26}],26:[function(_dereq_,module,exports){
+},{"./gl-action":14,"./gl-action-group":13,"./gl-body":15,"./gl-head":20,"./gl-topbar":27}],27:[function(_dereq_,module,exports){
 "use strict";
 var Topbar;
 
@@ -650,7 +683,47 @@ Topbar = Ember.Component.extend({
 });
 
 exports["default"] = Topbar;
-},{}],27:[function(_dereq_,module,exports){
+},{}],28:[function(_dereq_,module,exports){
+"use strict";
+var TaggingSelect2;
+
+TaggingSelect2 = Ember.TextField.extend({
+  classNames: ['gl-tagging-select2'],
+  tags: [],
+  placeholder: '请选择...',
+  allowClear: true,
+  closeOnSelect: true,
+  minimumInputLength: 0,
+  maximumSelectionSize: 0,
+  tokenSeparators: [",", " ", ";", "，", "；"],
+  didInsertElement: function() {
+    return Ember.run.scheduleOnce('afterRender', this, 'processChildElements');
+  },
+  processChildElements: function() {
+    var options;
+    options = {
+      placeholder: this.get('placeholder'),
+      allowClear: this.get('allowClear'),
+      closeOnSelect: this.get('closeOnSelect'),
+      tags: this.get('tags') || [],
+      tokenSeparators: this.get('tokenSeparators'),
+      minimumInputLength: this.get('minimumInputLength'),
+      maximumSelectionSize: this.get('maximumSelectionSize')
+    };
+    return this.$().select2(options);
+  },
+  willDestroyElement: function() {
+    return this.$().select2("destroy");
+  },
+  resetSelection: (function() {
+    if (!Ember.isEmpty(this.get('tags'))) {
+      return this.processChildElements();
+    }
+  }).observes('tags.@each')
+});
+
+exports["default"] = TaggingSelect2;
+},{}],29:[function(_dereq_,module,exports){
 "use strict";
 var DatetimePickerComponent = _dereq_("./components/gl-datetime-picker")["default"] || _dereq_("./components/gl-datetime-picker");
 
@@ -670,6 +743,9 @@ var TableComponent = _dereq_("./components/gl-table/gl-table")["default"] || _de
 var TableTemplate = _dereq_("./templates/gl-table")["default"] || _dereq_("./templates/gl-table");
 
 var SidelistComponent = _dereq_("./components/gl-sidelist/gl-sidelist")["default"] || _dereq_("./components/gl-sidelist/gl-sidelist");
+
+var Select2Component = _dereq_("./components/gl-select2")["default"] || _dereq_("./components/gl-select2");
+var TaggingSelect2Component = _dereq_("./components/gl-tagging-select2")["default"] || _dereq_("./components/gl-tagging-select2");
 
 var GloitInitializer = _dereq_("./initializers/gl-initializer")["default"] || _dereq_("./initializers/gl-initializer");
 
@@ -702,7 +778,9 @@ exports.TableColumnModel = TableColumnModel;
 exports.TableTemplate = TableTemplate;
 exports.TableComponent = TableComponent;
 exports.SidelistComponent = SidelistComponent;
-},{"./components/gl-datetime-picker":1,"./components/gl-login-form":2,"./components/gl-main-toolbar":3,"./components/gl-pagination/gl-pagination":5,"./components/gl-sidebar/gl-sidebar":9,"./components/gl-sidelist/gl-sidelist":11,"./components/gl-table/gl-column-model":16,"./components/gl-table/gl-table":25,"./initializers/gl-initializer":28,"./templates/gl-login-form":30,"./templates/gl-main-toolbar":31,"./templates/gl-sidebar":33,"./templates/gl-table":37}],28:[function(_dereq_,module,exports){
+exports.Select2Component = Select2Component;
+exports.TaggingSelect2Component = TaggingSelect2Component;
+},{"./components/gl-datetime-picker":1,"./components/gl-login-form":2,"./components/gl-main-toolbar":3,"./components/gl-pagination/gl-pagination":5,"./components/gl-select2":6,"./components/gl-sidebar/gl-sidebar":10,"./components/gl-sidelist/gl-sidelist":12,"./components/gl-table/gl-column-model":17,"./components/gl-table/gl-table":26,"./components/gl-tagging-select2":28,"./initializers/gl-initializer":30,"./templates/gl-login-form":32,"./templates/gl-main-toolbar":33,"./templates/gl-sidebar":35,"./templates/gl-table":39}],30:[function(_dereq_,module,exports){
 "use strict";
 var DatetimePickerComponent = _dereq_("../components/gl-datetime-picker")["default"] || _dereq_("../components/gl-datetime-picker");
 
@@ -721,6 +799,9 @@ var TableComponent = _dereq_("../components/gl-table/gl-table")["default"] || _d
 var TableTemplate = _dereq_("../templates/gl-table")["default"] || _dereq_("../templates/gl-table");
 
 var SidelistComponent = _dereq_("../components/gl-sidelist/gl-sidelist")["default"] || _dereq_("../components/gl-sidelist/gl-sidelist");
+
+var Select2Component = _dereq_("../components/gl-select2")["default"] || _dereq_("../components/gl-select2");
+var TaggingSelect2Component = _dereq_("../components/gl-tagging-select2")["default"] || _dereq_("../components/gl-tagging-select2");
 
 exports["default"] = {
   name: 'gloit',
@@ -743,9 +824,12 @@ exports["default"] = {
     container.register('component:gl-table', TableComponent);
 
     container.register('component:gl-sidelist', SidelistComponent);
+
+    container.register('component:gl-select2', Select2Component);
+    container.register('component:gl-tagging-select2', TaggingSelect2Component);
   }
 };
-},{"../components/gl-datetime-picker":1,"../components/gl-login-form":2,"../components/gl-main-toolbar":3,"../components/gl-pagination/gl-pagination":5,"../components/gl-sidebar/gl-sidebar":9,"../components/gl-sidelist/gl-sidelist":11,"../components/gl-table/gl-table":25,"../templates/gl-login-form":30,"../templates/gl-main-toolbar":31,"../templates/gl-sidebar":33,"../templates/gl-table":37}],29:[function(_dereq_,module,exports){
+},{"../components/gl-datetime-picker":1,"../components/gl-login-form":2,"../components/gl-main-toolbar":3,"../components/gl-pagination/gl-pagination":5,"../components/gl-select2":6,"../components/gl-sidebar/gl-sidebar":10,"../components/gl-sidelist/gl-sidelist":12,"../components/gl-table/gl-table":26,"../components/gl-tagging-select2":28,"../templates/gl-login-form":32,"../templates/gl-main-toolbar":33,"../templates/gl-sidebar":35,"../templates/gl-table":39}],31:[function(_dereq_,module,exports){
 "use strict";
 var styleBindings;
 
@@ -803,7 +887,7 @@ styleBindings = Ember.Mixin.create({
 });
 
 exports["default"] = styleBindings;
-},{}],30:[function(_dereq_,module,exports){
+},{}],32:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -881,7 +965,7 @@ function program4(depth0,data) {
   return buffer;
   
 });
-},{}],31:[function(_dereq_,module,exports){
+},{}],33:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -937,7 +1021,7 @@ function program5(depth0,data) {
   return buffer;
   
 });
-},{}],32:[function(_dereq_,module,exports){
+},{}],34:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -955,7 +1039,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   return buffer;
   
 });
-},{}],33:[function(_dereq_,module,exports){
+},{}],35:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -981,7 +1065,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   return buffer;
   
 });
-},{}],34:[function(_dereq_,module,exports){
+},{}],36:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1010,7 +1094,7 @@ function program1(depth0,data) {
   return buffer;
   
 });
-},{}],35:[function(_dereq_,module,exports){
+},{}],37:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1132,7 +1216,7 @@ function program11(depth0,data) {
   return buffer;
   
 });
-},{}],36:[function(_dereq_,module,exports){
+},{}],38:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1170,7 +1254,7 @@ function program2(depth0,data) {
   return buffer;
   
 });
-},{}],37:[function(_dereq_,module,exports){
+},{}],39:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1227,7 +1311,7 @@ function program2(depth0,data) {
   return buffer;
   
 });
-},{}],38:[function(_dereq_,module,exports){
+},{}],40:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1247,7 +1331,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   return buffer;
   
 });
-},{}],39:[function(_dereq_,module,exports){
+},{}],41:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1302,7 +1386,7 @@ function program5(depth0,data) {
   return buffer;
   
 });
-},{}],40:[function(_dereq_,module,exports){
+},{}],42:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1342,7 +1426,7 @@ function program3(depth0,data) {
   return buffer;
   
 });
-},{}],41:[function(_dereq_,module,exports){
+},{}],43:[function(_dereq_,module,exports){
 "use strict";
 var Ember = window.Ember["default"] || window.Ember;
 exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
@@ -1359,6 +1443,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   return buffer;
   
 });
-},{}]},{},[27])
-(27)
+},{}]},{},[29])
+(29)
 });

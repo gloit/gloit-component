@@ -17,6 +17,9 @@ var TableTemplate = require("../templates/gl-table")["default"] || require("../t
 
 var SidelistComponent = require("../components/gl-sidelist/gl-sidelist")["default"] || require("../components/gl-sidelist/gl-sidelist");
 
+var Select2Component = require("../components/gl-select2")["default"] || require("../components/gl-select2");
+var TaggingSelect2Component = require("../components/gl-tagging-select2")["default"] || require("../components/gl-tagging-select2");
+
 exports["default"] = {
   name: 'gloit',
 
@@ -38,5 +41,8 @@ exports["default"] = {
     container.register('component:gl-table', TableComponent);
 
     container.register('component:gl-sidelist', SidelistComponent);
+
+    container.register('component:gl-select2', Select2Component);
+    container.register('component:gl-tagging-select2', TaggingSelect2Component);
   }
 };
