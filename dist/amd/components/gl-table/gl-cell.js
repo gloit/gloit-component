@@ -15,7 +15,6 @@ define(
           data: options.data,
           hash: {}
         };
-        debugger;
         return Ember.Handlebars.helpers.bind.call(context, "view.value", options);
       },
       init: function() {
