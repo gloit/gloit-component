@@ -1408,7 +1408,7 @@ function program3(depth0,data) {
   
   var buffer = '';
   data.buffer.push("\n  ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "cellView", {hash:{
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "view.cellView", {hash:{
     'width': ("width"),
     'row': ("content"),
     'column': ("")
