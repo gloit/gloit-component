@@ -9,6 +9,7 @@ Cell = Ember.Component.extend styleBindings,
 
   defaultTemplate: (context, options) ->
     options =  data: options.data, hash: {}
+    debugger
     Ember.Handlebars.helpers.bind.call(context, "view.value", options)
 
   init: ->

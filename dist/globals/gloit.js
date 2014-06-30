@@ -401,6 +401,7 @@ Cell = Ember.Component.extend(styleBindings, {
       data: options.data,
       hash: {}
     };
+    debugger;
     return Ember.Handlebars.helpers.bind.call(context, "view.value", options);
   },
   init: function() {
@@ -1410,7 +1411,7 @@ function program3(depth0,data) {
   data.buffer.push("\n  ");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "view.cellView", {hash:{
     'width': ("width"),
-    'row': ("content"),
+    'row': ("view.content"),
     'column': ("")
   },hashTypes:{'width': "ID",'row': "ID",'column': "ID"},hashContexts:{'width': depth0,'row': depth0,'column': depth0},contexts:[depth0],types:["ID"],data:data})));
   data.buffer.push("\n");

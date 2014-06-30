@@ -24,7 +24,7 @@ define(
       data.buffer.push("\n  ");
       data.buffer.push(escapeExpression(helpers.view.call(depth0, "view.cellView", {hash:{
         'width': ("width"),
-        'row': ("content"),
+        'row': ("view.content"),
         'column': ("")
       },hashTypes:{'width': "ID",'row': "ID",'column': "ID"},hashContexts:{'width': depth0,'row': depth0,'column': depth0},contexts:[depth0],types:["ID"],data:data})));
       data.buffer.push("\n");
