@@ -6,7 +6,7 @@
     "vendor/ember/ember.js",
     "vendor/sinon/index.js",
     "vendor/ember-list-view/index.js",
-    "http://localhost:4200/globals/gloit.js",
+    "http://localhost:4200/globals/gloit-component.js",
     "vendor/ember-qunit/dist/globals/main.js",
     "test/test-helper.js",
     "test/**/*-test.js"

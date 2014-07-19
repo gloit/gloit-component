@@ -23,13 +23,13 @@ sed -i -r 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+",/  "version": "'$VERSION'",/
 sed -i -r 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+",/  "version": "'$VERSION'",/g' package.json
 
 # update lib file
-sed -i -r 's/^Ember.libraries.register\("Gloit", "[0-9]+\.[0-9]+\.[0-9]+"\);/Ember.libraries.register("Gloit", "'$VERSION'");/g' lib/gloit.js
+sed -i -r 's/^Ember.libraries.register\("GloitComponent", "[0-9]+\.[0-9]+\.[0-9]+"\);/Ember.libraries.register("GloitComponent", "'$VERSION'");/g' lib/gloit-component.js
 
 rm -rf dist && broccoli build dist
 git add -A dist
 git add bower.json
 git add package.json
-git add lib/gloit.js
+git add lib/gloit-component.js
 git commit -m "Version bump $VERSION"
 git tag -a "v$VERSION" -m "v$VERSION"
 git push origin master

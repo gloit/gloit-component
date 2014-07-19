@@ -1,6 +1,6 @@
-## Gloit
+## Gloit Component
 
-Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome、Firefox、Safari、IE8+。Gloit是从[ember-menglifang](https://github.com/emberjs-cn/ember-menglifang)中抽取的widgets部分的延续。
+Gloit Component是基于Ember开发的基础控件库。支持的浏览器：Google Chrome、Firefox、Safari、IE8+。Gloit Component是从[ember-menglifang](https://github.com/emberjs-cn/ember-menglifang)中抽取的widgets部分的延续。
 
 ### 使用说明
 
@@ -14,7 +14,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
   <link rel="stylesheet" href="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
   <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.6/select2.css" />
   <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.6/select2-bootstrap.css" />
-  <link rel="stylesheet" href="http://gloit.github.com/dist/gloit.css" />
+  <link rel="stylesheet" href="http://gloit.github.com/dist/gloit-component.css" />
   <!-- ... -->
 </head>
 ```
@@ -38,7 +38,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
     <script type="text/javascript" src="http://cdn.staticfile.org/select2/3.4.6/select2_locale_zh-CN.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script> 
-    <script type="text/javascript" src="http://gloit.github.com/dist/globals/gloit.js"></script> 
+    <script type="text/javascript" src="http://gloit.github.com/dist/globals/gloit-component.js"></script> 
   </body>
 </html>
 ```
@@ -49,7 +49,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
 
 1. 安装构建工具
 
-  构建gloit依赖node.js、broccoli和bower，因此需要预先安装这些个工具：
+  构建gloit-component依赖node.js、broccoli和bower，因此需要预先安装这些个工具：
 
   *注意：* node.js的安装请参照各平台对应的安装说明文件，在此不对安装过程进行详细介绍。
 
@@ -61,7 +61,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
 2. 签出项目
 
   ```bash
-  git checkout https://github.com/gloit/gloit.git
+  git clone https://github.com/gloit/gloit-component.git
   ```
 
 3. 安装依赖
@@ -72,7 +72,7 @@ Gloit是基于Ember开发的基础控件库。支持的浏览器：Google Chrome
 
 4. 发布
 
-  gloit构建发布过程只需执行`rm -fr ./dist && broccoli build ./dist`即可完成。命令正确执行后，可以在`dist`目录中找到编译后的代码。
+  gloit-component构建发布过程只需执行`rm -fr ./dist && broccoli build ./dist`即可完成。命令正确执行后，可以在`dist`目录中找到编译后的代码。
 
 
 5. 测试

@@ -15,7 +15,7 @@ function filterES6Modules(tree, opts) {
   return vndFilterES6Modules(tree, opts);
 }
 
-var styles = compileLess([less], 'gloit.less', 'gloit.css');
+var styles = compileLess([less], 'gloit-component.less', 'gloit-component.css');
 styles = autoprefixer(styles);
 
 var templates = pickFiles(lib, {
@@ -41,9 +41,9 @@ lib = filterCoffeeScript(lib, {
 });
 
 lib = filterES6Modules(lib, {
-  global:      'Gloit',
-  packageName: 'gloit',
-  main:        'gloit',
+  global:      'GloitComponent',
+  packageName: 'gloit-component',
+  main:        'gloit-component',
 
   shim: {
     ember:      'Ember',

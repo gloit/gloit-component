@@ -1,9 +1,9 @@
 {
-  "name": "gloit",
+  "name": "gloit-component",
   "version": "0.1.0",
   "main": [
-    "dist/gloit.css",
-    "dist/globals/gloit.js"
+    "dist/gloit-component.css",
+    "dist/globals/gloit-component.js"
   ],
   "authors": [
     "Tower He <towerhe@gmail.com>"

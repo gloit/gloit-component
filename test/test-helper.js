@@ -4,11 +4,11 @@ emq.globalize();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:gl-login-form': gloit.LoginFormComponent,
-    'template:components/gl-login-form': gloit.LoginFormTemplate,
-    'component:gl-pagination': gloit.PaginationComponent,
-    'template:components/gl-sidebar': gloit.SidebarTemplate,
-    'component:gl-sidebar': gloit.SidebarComponent
+    'component:gc-login-form': GloitComponent.LoginFormComponent,
+    'template:components/gc-login-form': GloitComponent.LoginFormTemplate,
+    'component:gc-pagination': GloitComponent.PaginationComponent,
+    'template:components/gc-sidebar': GloitComponent.SidebarTemplate,
+    'component:gc-sidebar': GloitComponent.SidebarComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
