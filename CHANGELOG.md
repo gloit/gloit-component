@@ -1,4 +1,4 @@
-*Gloit 0.2.0 (Jun x, 2014)*
+*Gloit 0.2.0 (Jul 21, 2014)*
 
 * Rename the repo to gloit-component;
 * Upgraded fontawesome to 4.1.
