@@ -8,7 +8,9 @@ setResolver(Ember.DefaultResolver.extend({
     'template:components/gc-login-form': GloitComponent.LoginFormTemplate,
     'component:gc-pagination': GloitComponent.PaginationComponent,
     'template:components/gc-sidebar': GloitComponent.SidebarTemplate,
-    'component:gc-sidebar': GloitComponent.SidebarComponent
+    'component:gc-sidebar': GloitComponent.SidebarComponent,
+    'template:components/gc-table': GloitComponent.TableTemplate,
+    'component:gc-table': GloitComponent.TableComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);

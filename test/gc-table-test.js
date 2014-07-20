@@ -1,7 +1,7 @@
 moduleForComponent('gc-table');
 
-test('the brand of the sidebar', function() {
-  expect(4);
+test('renders rows', function() {
+  expect(2);
 
   table = this.subject();
 
