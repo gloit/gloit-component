@@ -98,7 +98,7 @@ define("gloit-component/components/gc-pagination/gc-button",
         var page;
         page = this.get('content.page');
         return page !== this.get('content.text') && page === this.get('current');
-      }).property('current', 'content.{page, text}'),
+      }).property('current', 'content.{page,text}'),
       active: (function() {
         var page;
         page = this.get('content.page');

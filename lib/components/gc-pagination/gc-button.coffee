@@ -11,7 +11,7 @@ PaginationButton = Ember.Component.extend
   disabled: (->
     page = @get('content.page')
     page != @get('content.text') && page == @get('current')
-  ).property('current', 'content.{page, text}')
+  ).property('current', 'content.{page,text}')
 
   active: (->
     page = @get('content.page')
