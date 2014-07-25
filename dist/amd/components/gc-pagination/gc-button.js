@@ -19,7 +19,7 @@ define(
         var page;
         page = this.get('content.page');
         return page === this.get('content.text') && page === this.get('current');
-      }).property('current', 'content.{page, text}'),
+      }).property('current', 'content.{page,text}'),
       actions: {
         page: function(page) {
           return this.triggerAction({
