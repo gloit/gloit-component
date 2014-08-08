@@ -1,3 +1,7 @@
+*Gloit 0.3.0 (2014)*
+
+* Add `gc-rate-gauge-chart`.
+
 *Gloit 0.2.0 (Jul 21, 2014)*
 
 * Rename the repo to gloit-component;

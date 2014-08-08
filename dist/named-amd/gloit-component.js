@@ -32,6 +32,129 @@ define("gloit-component/components/gc-datetime-picker",
 
     __exports__["default"] = DatetimePicker;
   });
+define("gloit-component/components/gc-highcharts/gc-rate-gauge-chart",
+  ["exports"],
+  function(__exports__) {
+    "use strict";
+    var RateGaugeChart;
+
+    RateGaugeChart = Ember.Component.extend({
+      title: '',
+      rate: 0,
+      config: {
+        chart: {
+          type: 'gauge',
+          plotBackgroundColor: null,
+          plotBackgroundImage: null,
+          plotBorderWidth: 0,
+          plotShadow: false
+        },
+        title: {
+          text: ''
+        },
+        pane: {
+          startAngle: -150,
+          endAngle: 150,
+          background: [
+            {
+              backgroundColor: {
+                linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1
+                },
+                stops: [[0, '#FFF'], [1, '#333']]
+              },
+              borderWidth: 0,
+              outerRadius: '109%'
+            }, {
+              backgroundColor: {
+                linearGradient: {
+                  x1: 0,
+                  y1: 0,
+                  x2: 0,
+                  y2: 1
+                },
+                stops: [[0, '#333'], [1, '#FFF']]
+              },
+              borderWidth: 1,
+              outerRadius: '107%'
+            }, {}, {
+              backgroundColor: '#DDD',
+              borderWidth: 0,
+              outerRadius: '105%',
+              innerRadius: '103%'
+            }
+          ]
+        },
+        yAxis: {
+          min: 0,
+          max: 200,
+          minorTickInterval: 'auto',
+          minorTickWidth: 1,
+          minorTickLength: 10,
+          minorTickPosition: 'inside',
+          minorTickColor: '#666',
+          tickPixelInterval: 30,
+          tickWidth: 2,
+          tickPosition: 'inside',
+          tickLength: 10,
+          tickColor: '#666',
+          labels: {
+            step: 2,
+            rotation: 'auto'
+          },
+          title: {
+            text: '%'
+          },
+          plotBands: [
+            {
+              from: 0,
+              to: 120,
+              color: '#55BF3B'
+            }, {
+              from: 120,
+              to: 160,
+              color: '#DDDF0D'
+            }, {
+              from: 160,
+              to: 200,
+              color: '#DF5353'
+            }
+          ]
+        },
+        series: [
+          {
+            name: '使用率',
+            data: [0],
+            tooltip: {
+              valueSuffix: ' %'
+            }
+          }
+        ]
+      },
+      didInsertElement: function() {
+        return Ember.run.scheduleOnce('afterRender', this, (function(_this) {
+          return function() {
+            var config;
+            config = _this.get('config');
+            config.chart.renderTo = _this.get('elementId');
+            config.title.text = _this.get('title') || '';
+            config.series[0].data[0] = _this.get('rate') || 0;
+            return _this.set('chart', new Highcharts.Chart(config));
+          };
+        })(this));
+      },
+      onRateChanged: (function() {
+        if (!Ember.isNone(this.get('rate'))) {
+          return this.get('chart').series[0].points[0].update(this.get('rate'));
+        }
+      }).observes('rate')
+    });
+
+    __exports__["default"] = RateGaugeChart;
+  });
 define("gloit-component/components/gc-login-form",
   ["exports"],
   function(__exports__) {
@@ -808,8 +931,8 @@ define("gloit-component/components/gc-tagging-select2",
     __exports__["default"] = TaggingSelect2;
   });
 define("gloit-component",
-  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-select2","./components/gc-tagging-select2","./initializers/gc-initializer","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __exports__) {
+  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-select2","./components/gc-tagging-select2","./components/gc-highcharts/gc-rate-gauge-chart","./initializers/gc-initializer","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __dependency16__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -833,7 +956,9 @@ define("gloit-component",
     var Select2Component = __dependency13__["default"] || __dependency13__;
     var TaggingSelect2Component = __dependency14__["default"] || __dependency14__;
 
-    var Initializer = __dependency15__["default"] || __dependency15__;
+    var RateGaugeChartComponent = __dependency15__["default"] || __dependency15__;
+
+    var Initializer = __dependency16__["default"] || __dependency16__;
 
     Ember.Application.initializer(Initializer);
 
@@ -866,6 +991,7 @@ define("gloit-component",
     __exports__.SidelistComponent = SidelistComponent;
     __exports__.Select2Component = Select2Component;
     __exports__.TaggingSelect2Component = TaggingSelect2Component;
+    __exports__.RateGaugeChartComponent = RateGaugeChartComponent;
   });
 define("gloit-component/initializers/gc-initializer",
   ["../components/gc-datetime-picker","../components/gc-login-form","../templates/gc-login-form","../components/gc-main-toolbar","../templates/gc-main-toolbar","../components/gc-pagination/gc-pagination","../components/gc-sidebar/gc-sidebar","../templates/gc-sidebar","../components/gc-table/gc-table","../templates/gc-table","../components/gc-sidelist/gc-sidelist","../components/gc-select2","../components/gc-tagging-select2","exports"],

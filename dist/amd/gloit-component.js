@@ -1,6 +1,6 @@
 define(
-  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-select2","./components/gc-tagging-select2","./initializers/gc-initializer","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __exports__) {
+  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-select2","./components/gc-tagging-select2","./components/gc-highcharts/gc-rate-gauge-chart","./initializers/gc-initializer","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __dependency16__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -24,7 +24,9 @@ define(
     var Select2Component = __dependency13__["default"] || __dependency13__;
     var TaggingSelect2Component = __dependency14__["default"] || __dependency14__;
 
-    var Initializer = __dependency15__["default"] || __dependency15__;
+    var RateGaugeChartComponent = __dependency15__["default"] || __dependency15__;
+
+    var Initializer = __dependency16__["default"] || __dependency16__;
 
     Ember.Application.initializer(Initializer);
 
@@ -57,4 +59,5 @@ define(
     __exports__.SidelistComponent = SidelistComponent;
     __exports__.Select2Component = Select2Component;
     __exports__.TaggingSelect2Component = TaggingSelect2Component;
+    __exports__.RateGaugeChartComponent = RateGaugeChartComponent;
   });
