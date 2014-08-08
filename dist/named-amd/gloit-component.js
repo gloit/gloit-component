@@ -994,8 +994,8 @@ define("gloit-component",
     __exports__.RateGaugeChartComponent = RateGaugeChartComponent;
   });
 define("gloit-component/initializers/gc-initializer",
-  ["../components/gc-datetime-picker","../components/gc-login-form","../templates/gc-login-form","../components/gc-main-toolbar","../templates/gc-main-toolbar","../components/gc-pagination/gc-pagination","../components/gc-sidebar/gc-sidebar","../templates/gc-sidebar","../components/gc-table/gc-table","../templates/gc-table","../components/gc-sidelist/gc-sidelist","../components/gc-select2","../components/gc-tagging-select2","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __exports__) {
+  ["../components/gc-datetime-picker","../components/gc-login-form","../templates/gc-login-form","../components/gc-main-toolbar","../templates/gc-main-toolbar","../components/gc-pagination/gc-pagination","../components/gc-sidebar/gc-sidebar","../templates/gc-sidebar","../components/gc-table/gc-table","../templates/gc-table","../components/gc-sidelist/gc-sidelist","../components/gc-select2","../components/gc-tagging-select2","../components/gc-highcharts/gc-rate-gauge-chart","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -1017,6 +1017,8 @@ define("gloit-component/initializers/gc-initializer",
 
     var Select2Component = __dependency12__["default"] || __dependency12__;
     var TaggingSelect2Component = __dependency13__["default"] || __dependency13__;
+
+    var RateGaugeChartComponent = __dependency14__["default"] || __dependency14__;
 
     __exports__["default"] = {
       name: 'gloit-component',
@@ -1042,6 +1044,8 @@ define("gloit-component/initializers/gc-initializer",
 
         container.register('component:gc-select2', Select2Component);
         container.register('component:gc-tagging-select2', TaggingSelect2Component);
+
+        container.register('component:gc-rate-gauge-chart', RateGaugeChartComponent);
       }
     };
   });

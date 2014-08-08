@@ -926,6 +926,8 @@ var SidelistComponent = _dereq_("../components/gc-sidelist/gc-sidelist")["defaul
 var Select2Component = _dereq_("../components/gc-select2")["default"] || _dereq_("../components/gc-select2");
 var TaggingSelect2Component = _dereq_("../components/gc-tagging-select2")["default"] || _dereq_("../components/gc-tagging-select2");
 
+var RateGaugeChartComponent = _dereq_("../components/gc-highcharts/gc-rate-gauge-chart")["default"] || _dereq_("../components/gc-highcharts/gc-rate-gauge-chart");
+
 exports["default"] = {
   name: 'gloit-component',
 
@@ -950,9 +952,11 @@ exports["default"] = {
 
     container.register('component:gc-select2', Select2Component);
     container.register('component:gc-tagging-select2', TaggingSelect2Component);
+
+    container.register('component:gc-rate-gauge-chart', RateGaugeChartComponent);
   }
 };
-},{"../components/gc-datetime-picker":1,"../components/gc-login-form":3,"../components/gc-main-toolbar":4,"../components/gc-pagination/gc-pagination":6,"../components/gc-select2":7,"../components/gc-sidebar/gc-sidebar":11,"../components/gc-sidelist/gc-sidelist":13,"../components/gc-table/gc-table":27,"../components/gc-tagging-select2":29,"../templates/gc-login-form":33,"../templates/gc-main-toolbar":34,"../templates/gc-sidebar":36,"../templates/gc-table":40}],32:[function(_dereq_,module,exports){
+},{"../components/gc-datetime-picker":1,"../components/gc-highcharts/gc-rate-gauge-chart":2,"../components/gc-login-form":3,"../components/gc-main-toolbar":4,"../components/gc-pagination/gc-pagination":6,"../components/gc-select2":7,"../components/gc-sidebar/gc-sidebar":11,"../components/gc-sidelist/gc-sidelist":13,"../components/gc-table/gc-table":27,"../components/gc-tagging-select2":29,"../templates/gc-login-form":33,"../templates/gc-main-toolbar":34,"../templates/gc-sidebar":36,"../templates/gc-table":40}],32:[function(_dereq_,module,exports){
 "use strict";
 var styleBindings;
 
