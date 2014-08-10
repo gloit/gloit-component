@@ -1,9 +1,9 @@
 "use strict";
-var KindEditor;
+var KindEditorComponent;
 
-KindEditor = Ember.TextArea.extend({
+KindEditorComponent = Ember.TextArea.extend({
   didInsertElement: function() {
-    if (!Ember.isNone(K)) {
+    if (!Ember.isNone(KindEditor)) {
       return Ember.run.scheduleOnce('afterRender', this, 'createEditor');
     }
   },
@@ -12,4 +12,4 @@ KindEditor = Ember.TextArea.extend({
   }
 });
 
-exports["default"] = KindEditor;
+exports["default"] = KindEditorComponent;

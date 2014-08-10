@@ -159,11 +159,11 @@ define("gloit-component/components/gc-kind-editor",
   ["exports"],
   function(__exports__) {
     "use strict";
-    var KindEditor;
+    var KindEditorComponent;
 
-    KindEditor = Ember.TextArea.extend({
+    KindEditorComponent = Ember.TextArea.extend({
       didInsertElement: function() {
-        if (!Ember.isNone(K)) {
+        if (!Ember.isNone(KindEditor)) {
           return Ember.run.scheduleOnce('afterRender', this, 'createEditor');
         }
       },
@@ -172,7 +172,7 @@ define("gloit-component/components/gc-kind-editor",
       }
     });
 
-    __exports__["default"] = KindEditor;
+    __exports__["default"] = KindEditorComponent;
   });
 define("gloit-component/components/gc-login-form",
   ["exports"],
