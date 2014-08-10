@@ -168,7 +168,7 @@ define("gloit-component/components/gc-kind-editor",
         }
       },
       createEditor: function() {
-        return KindEditor.create(this.get('elementId'), KindEditor.options);
+        return KindEditor.create(this.$(), KindEditor.options);
       }
     });
 
