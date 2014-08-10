@@ -11,7 +11,7 @@ define(
         }
       },
       createEditor: function() {
-        return K.create(this.get('elementId'));
+        return KindEditor.create(this.get('elementId'), KindEditor.options);
       }
     });
 
