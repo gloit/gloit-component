@@ -22,6 +22,8 @@ var TaggingSelect2Component = require("../components/gc-tagging-select2")["defau
 
 var RateGaugeChartComponent = require("../components/gc-highcharts/gc-rate-gauge-chart")["default"] || require("../components/gc-highcharts/gc-rate-gauge-chart");
 
+var KindEditorComponent = require("../components/gc-kind-editor")["default"] || require("../components/gc-kind-editor");
+
 exports["default"] = {
   name: 'gloit-component',
 
@@ -48,5 +50,7 @@ exports["default"] = {
     container.register('component:gc-tagging-select2', TaggingSelect2Component);
 
     container.register('component:gc-rate-gauge-chart', RateGaugeChartComponent);
+
+    container.register('component:gc-kind-editor', KindEditorComponent);
   }
 };

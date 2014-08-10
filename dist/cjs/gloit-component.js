@@ -23,6 +23,8 @@ var TaggingSelect2Component = require("./components/gc-tagging-select2")["defaul
 
 var RateGaugeChartComponent = require("./components/gc-highcharts/gc-rate-gauge-chart")["default"] || require("./components/gc-highcharts/gc-rate-gauge-chart");
 
+var KindEditorComponent = require("./components/gc-kind-editor")["default"] || require("./components/gc-kind-editor");
+
 var Initializer = require("./initializers/gc-initializer")["default"] || require("./initializers/gc-initializer");
 
 Ember.Application.initializer(Initializer);
@@ -57,3 +59,4 @@ exports.SidelistComponent = SidelistComponent;
 exports.Select2Component = Select2Component;
 exports.TaggingSelect2Component = TaggingSelect2Component;
 exports.RateGaugeChartComponent = RateGaugeChartComponent;
+exports.KindEditorComponent = KindEditorComponent;

@@ -32,7 +32,8 @@
     "jquery": "~1.11.0",
     "jquery.browser": "~0.0.6",
     "momentjs": "~2.5.1",
-    "highcharts": "~4.0.3"
+    "highcharts": "~4.0.3",
+    "kindeditor": "https://github.com/kindsoft/kindeditor.git#~4.1.10"
   },
   "devDependencies": {
     "sinon": "http://sinonjs.org/releases/sinon-1.7.3.js",
