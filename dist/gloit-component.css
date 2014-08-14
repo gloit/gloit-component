@@ -593,8 +593,10 @@ form .form-group.buttons button.btn:first-of-type {
 ul.gc-toolbar-links {
   list-style-type: none;
   margin: 0;
-  margin-top: -60px;
   background: #0074d9;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 ul.gc-toolbar-links > li {
   float: left;
