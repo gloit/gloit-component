@@ -8,7 +8,15 @@ KindEditorComponent = Ember.TextArea.extend({
     }
   },
   createEditor: function() {
-    return KindEditor.create(this.$(), KindEditor.options);
+    var afterChange, options, self;
+    self = this;
+    afterChange = function() {
+      return self.set('value', this.html());
+    };
+    options = Ember.merge({
+      afterChange: afterChange
+    }, KindEditor.options);
+    return KindEditor.create(this.$(), options);
   }
 });
 
