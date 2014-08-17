@@ -3,7 +3,7 @@ var KindEditorComponent;
 
 KindEditorComponent = Ember.TextArea.extend({
   didInsertElement: function() {
-    if (!Ember.isNone(KEditor)) {
+    if (!Ember.isNone(KindEditor)) {
       return Ember.run.scheduleOnce('afterRender', this, 'createEditor');
     }
   },
@@ -15,8 +15,8 @@ KindEditorComponent = Ember.TextArea.extend({
     };
     options = Ember.merge({
       afterChange: afterChange
-    }, KEditor.options);
-    return KEditor.create(this.$(), options);
+    }, KindEditor.options);
+    return KindEditor.create(this.$(), options);
   }
 });
 
