@@ -1,11 +1,11 @@
 KindEditorComponent = Ember.TextArea.extend
   didInsertElement: ->
-    Ember.run.scheduleOnce('afterRender', @, 'createEditor') unless Ember.isNone(KindEditor)
+    Ember.run.scheduleOnce('afterRender', @, 'createEditor') unless Ember.isNone(KEditor)
 
   createEditor: ->
     self = @
     afterChange = -> self.set('value', @html())
-    options = Ember.merge(afterChange: afterChange, KindEditor.options)
-    KindEditor.create(@$(), options)
+    options = Ember.merge(afterChange: afterChange, KEditor.options)
+    KEditor.create(@$(), options)
 
 `export default KindEditorComponent`
