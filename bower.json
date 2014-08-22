@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "qunit": "~1.15.0",
-    "ember": "~1.8.0-beta.1",
+    "ember": "~1.7.0",
     "bootstrap": "~3.2.0",
     "font-awesome": "~4.1",
     "ember-resolver": "~0.1.7",
