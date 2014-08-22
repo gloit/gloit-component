@@ -1,5 +1,6 @@
 *Gloit 0.3.0 (2014)*
 
+* Upgrade deps;
 * Add `gc-kindeditor`;
 * Add `gc-rate-gauge-chart`.
 
