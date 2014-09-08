@@ -1,4 +1,5 @@
 `import styleBindings from '../../mixins/style-bindings'`
+`import layout from '../../templates/gc-table/gc-cell'`
 
 Cell = Ember.Component.extend styleBindings,
   tagName: 'td'
@@ -7,9 +8,7 @@ Cell = Ember.Component.extend styleBindings,
 
   textAlignBinding: 'column.textAlign'
 
-  defaultTemplate: (context, options) ->
-    options =  data: options.data, hash: {}
-    Ember.Handlebars.helpers.bind.call(context, "view.value", options)
+  layout: layout,
 
   init: ->
     @valuePathDidChange()

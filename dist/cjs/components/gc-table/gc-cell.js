@@ -1,5 +1,6 @@
 "use strict";
 var styleBindings = require("../../mixins/style-bindings")["default"] || require("../../mixins/style-bindings");
+var layout = require("../../templates/gc-table/gc-cell")["default"] || require("../../templates/gc-table/gc-cell");
 var Cell;
 
 Cell = Ember.Component.extend(styleBindings, {
@@ -7,13 +8,7 @@ Cell = Ember.Component.extend(styleBindings, {
   classNames: ['gc-table-cell'],
   styleBindings: ['textAlign:text-align'],
   textAlignBinding: 'column.textAlign',
-  defaultTemplate: function(context, options) {
-    options = {
-      data: options.data,
-      hash: {}
-    };
-    return Ember.Handlebars.helpers.bind.call(context, "view.value", options);
-  },
+  layout: layout,
   init: function() {
     this.valuePathDidChange();
     return this._super();

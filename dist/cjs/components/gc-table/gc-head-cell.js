@@ -1,5 +1,6 @@
 "use strict";
 var styleBindings = require("../../mixins/style-bindings")["default"] || require("../../mixins/style-bindings");
+var layout = require("../../templates/gc-table/gc-head-cell")["default"] || require("../../templates/gc-table/gc-head-cell");
 var HeadCell;
 
 HeadCell = Ember.Component.extend(styleBindings, {
@@ -8,13 +9,7 @@ HeadCell = Ember.Component.extend(styleBindings, {
   styleBindings: ['minWidth:min-width', 'textAlign:text-align'],
   minWidthBinding: 'content.width',
   textAlignBinding: 'content.textAlign',
-  defaultTemplate: function(context, options) {
-    options = {
-      data: options.data,
-      hash: {}
-    };
-    return Ember.Handlebars.helpers.bind.call(context, "view.content.title", options);
-  }
+  layout: layout
 });
 
 exports["default"] = HeadCell;

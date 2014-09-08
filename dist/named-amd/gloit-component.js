@@ -582,10 +582,11 @@ define("gloit-component/components/gc-table/gc-body",
     __exports__["default"] = Body;
   });
 define("gloit-component/components/gc-table/gc-cell",
-  ["../../mixins/style-bindings","exports"],
-  function(__dependency1__, __exports__) {
+  ["../../mixins/style-bindings","../../templates/gc-table/gc-cell","exports"],
+  function(__dependency1__, __dependency2__, __exports__) {
     "use strict";
     var styleBindings = __dependency1__["default"] || __dependency1__;
+    var layout = __dependency2__["default"] || __dependency2__;
     var Cell;
 
     Cell = Ember.Component.extend(styleBindings, {
@@ -593,13 +594,7 @@ define("gloit-component/components/gc-table/gc-cell",
       classNames: ['gc-table-cell'],
       styleBindings: ['textAlign:text-align'],
       textAlignBinding: 'column.textAlign',
-      defaultTemplate: function(context, options) {
-        options = {
-          data: options.data,
-          hash: {}
-        };
-        return Ember.Handlebars.helpers.bind.call(context, "view.value", options);
-      },
+      layout: layout,
       init: function() {
         this.valuePathDidChange();
         return this._super();
@@ -640,10 +635,11 @@ define("gloit-component/components/gc-table/gc-column-model",
     __exports__["default"] = ColumnModel;
   });
 define("gloit-component/components/gc-table/gc-head-cell",
-  ["../../mixins/style-bindings","exports"],
-  function(__dependency1__, __exports__) {
+  ["../../mixins/style-bindings","../../templates/gc-table/gc-head-cell","exports"],
+  function(__dependency1__, __dependency2__, __exports__) {
     "use strict";
     var styleBindings = __dependency1__["default"] || __dependency1__;
+    var layout = __dependency2__["default"] || __dependency2__;
     var HeadCell;
 
     HeadCell = Ember.Component.extend(styleBindings, {
@@ -652,13 +648,7 @@ define("gloit-component/components/gc-table/gc-head-cell",
       styleBindings: ['minWidth:min-width', 'textAlign:text-align'],
       minWidthBinding: 'content.width',
       textAlignBinding: 'content.textAlign',
-      defaultTemplate: function(context, options) {
-        options = {
-          data: options.data,
-          hash: {}
-        };
-        return Ember.Handlebars.helpers.bind.call(context, "view.content.title", options);
-      }
+      layout: layout
     });
 
     __exports__["default"] = HeadCell;
@@ -1594,6 +1584,42 @@ define("gloit-component/templates/gc-table/gc-action",
       },hashTypes:{'class': "ID"},hashContexts:{'class': depth0},contexts:[],types:[],data:data})));
       data.buffer.push("></i> ");
       stack1 = helpers._triageMustache.call(depth0, "content.text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+      data.buffer.push("\n");
+      return buffer;
+      
+    });
+  });
+define("gloit-component/templates/gc-table/gc-cell",
+  ["ember","exports"],
+  function(__dependency1__, __exports__) {
+    "use strict";
+    var Ember = __dependency1__["default"] || __dependency1__;
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    this.compilerInfo = [4,'>= 1.0.0'];
+    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+      var buffer = '', stack1;
+
+
+      stack1 = helpers._triageMustache.call(depth0, "value", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+      data.buffer.push("\n");
+      return buffer;
+      
+    });
+  });
+define("gloit-component/templates/gc-table/gc-head-cell",
+  ["ember","exports"],
+  function(__dependency1__, __exports__) {
+    "use strict";
+    var Ember = __dependency1__["default"] || __dependency1__;
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    this.compilerInfo = [4,'>= 1.0.0'];
+    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+      var buffer = '', stack1;
+
+
+      stack1 = helpers._triageMustache.call(depth0, "content.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push("\n");
       return buffer;

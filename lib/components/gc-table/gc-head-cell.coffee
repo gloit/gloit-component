@@ -1,4 +1,5 @@
 `import styleBindings from '../../mixins/style-bindings'`
+`import layout from '../../templates/gc-table/gc-head-cell'`
 
 HeadCell = Ember.Component.extend styleBindings,
   tagName: 'td'
@@ -8,8 +9,6 @@ HeadCell = Ember.Component.extend styleBindings,
   minWidthBinding: 'content.width'
   textAlignBinding: 'content.textAlign'
 
-  defaultTemplate: (context, options) ->
-    options =  data: options.data, hash: {}
-    Ember.Handlebars.helpers.bind.call(context, "view.content.title", options)
+  layout: layout
 
 `export default HeadCell`

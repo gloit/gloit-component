@@ -14,10 +14,10 @@ HeadRow = Ember.CollectionView.extend
     @_createSelectAllCell() if @get('hasSelectAllCell')
 
   _createIndexCell: ->
-    @.unshiftObject HeadCell.create
+    @unshiftObject HeadCell.create
       content: Ember.Object.create(width: 30, textAlign: 'center', title: '#')
 
   _createSelectAllCell: ->
-    @.unshiftObject SelectAllCell.create()
+    @unshiftObject SelectAllCell.create()
 
 `export default HeadRow`
