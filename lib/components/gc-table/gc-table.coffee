@@ -1,12 +1,10 @@
 `import Action from './gc-action'`
-`import ActionGroup from './gc-action-group'`
 `import Topbar from './gc-topbar'`
 `import Head from './gc-head'`
 `import Body from './gc-body'`
 
 Table= Ember.Component.extend
   topbarView: Topbar
-  actionGroupView: ActionGroup
   headView: Head
   bodyView: Body
 

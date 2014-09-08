@@ -3,7 +3,7 @@ moduleForComponent('gc-table');
 test('renders rows', function() {
   expect(2);
 
-  table = this.subject();
+  var table = this.subject();
 
   ok(!Ember.isEmpty(this.$('.gc-table')), 'exists');
 
@@ -32,4 +32,18 @@ test('renders rows', function() {
   });
 
   equal(table.$('tbody tr').length, 2, 'has two records in rows');
+});
+
+test('renders top actions', function() {
+  expect(1);
+
+  var table = this.subject();
+
+  Ember.run(function() {
+    table.set('topActions', [{
+      name: 'removeSelected', text: '移除选定', icon: 'fa fa-minus', position: 'left'
+    }]);
+  });
+
+  equal(this.$('caption .gc-table-action-group.pull-left a').text().trim(), '移除选定', 'renders left side actions');
 });
