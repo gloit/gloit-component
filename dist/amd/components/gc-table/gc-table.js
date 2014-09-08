@@ -1,17 +1,15 @@
 define(
-  ["./gc-action","./gc-action-group","./gc-topbar","./gc-head","./gc-body","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __exports__) {
+  ["./gc-action","./gc-topbar","./gc-head","./gc-body","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __exports__) {
     "use strict";
     var Action = __dependency1__["default"] || __dependency1__;
-    var ActionGroup = __dependency2__["default"] || __dependency2__;
-    var Topbar = __dependency3__["default"] || __dependency3__;
-    var Head = __dependency4__["default"] || __dependency4__;
-    var Body = __dependency5__["default"] || __dependency5__;
+    var Topbar = __dependency2__["default"] || __dependency2__;
+    var Head = __dependency3__["default"] || __dependency3__;
+    var Body = __dependency4__["default"] || __dependency4__;
     var Table;
 
     Table = Ember.Component.extend({
       topbarView: Topbar,
-      actionGroupView: ActionGroup,
       headView: Head,
       bodyView: Body,
       init: function() {

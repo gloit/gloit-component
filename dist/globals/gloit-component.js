@@ -748,7 +748,6 @@ exports["default"] = SingleSelectableRow;
 },{"./gc-selectable-row":26}],28:[function(_dereq_,module,exports){
 "use strict";
 var Action = _dereq_("./gc-action")["default"] || _dereq_("./gc-action");
-var ActionGroup = _dereq_("./gc-action-group")["default"] || _dereq_("./gc-action-group");
 var Topbar = _dereq_("./gc-topbar")["default"] || _dereq_("./gc-topbar");
 var Head = _dereq_("./gc-head")["default"] || _dereq_("./gc-head");
 var Body = _dereq_("./gc-body")["default"] || _dereq_("./gc-body");
@@ -756,7 +755,6 @@ var Table;
 
 Table = Ember.Component.extend({
   topbarView: Topbar,
-  actionGroupView: ActionGroup,
   headView: Head,
   bodyView: Body,
   init: function() {
@@ -814,20 +812,24 @@ Table = Ember.Component.extend({
 });
 
 exports["default"] = Table;
-},{"./gc-action":16,"./gc-action-group":15,"./gc-body":17,"./gc-head":22,"./gc-topbar":29}],29:[function(_dereq_,module,exports){
+},{"./gc-action":16,"./gc-body":17,"./gc-head":22,"./gc-topbar":29}],29:[function(_dereq_,module,exports){
 "use strict";
+var ActionGroup = _dereq_("./gc-action-group")["default"] || _dereq_("./gc-action-group");
+var layout = _dereq_("../../templates/gc-table/gc-topbar")["default"] || _dereq_("../../templates/gc-table/gc-topbar");
 var Topbar;
 
 Topbar = Ember.Component.extend({
+  actionGroupView: ActionGroup,
   tagName: 'caption',
   classNames: ['gc-table-top-bar'],
+  layout: layout,
   barActions: [],
   leftActions: Ember.computed.filterBy('barActions', 'position', 'left'),
   rightActions: Ember.computed.filterBy('barActions', 'position', 'right')
 });
 
 exports["default"] = Topbar;
-},{}],30:[function(_dereq_,module,exports){
+},{"../../templates/gc-table/gc-topbar":46,"./gc-action-group":15}],30:[function(_dereq_,module,exports){
 "use strict";
 var TaggingSelect2;
 
@@ -1422,29 +1424,12 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1;
-  data.buffer.push("\n  ");
-  stack1 = helpers.view.call(depth0, "topbarView", {hash:{
-    'barActions': ("topActions")
-  },hashTypes:{'barActions': "ID"},hashContexts:{'barActions': depth0},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n");
-  return buffer;
-  }
-function program2(depth0,data) {
-  
   var buffer = '';
-  data.buffer.push("\n    ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "actionGroupView", {hash:{
-    'class': ("pull-left"),
-    'content': ("leftActions")
-  },hashTypes:{'class': "STRING",'content': "ID"},hashContexts:{'class': depth0,'content': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n    ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "actionGroupView", {hash:{
-    'class': ("pull-right"),
-    'content': ("rightActions")
-  },hashTypes:{'class': "STRING",'content': "ID"},hashContexts:{'class': depth0,'content': depth0},contexts:[depth0],types:["ID"],data:data})));
   data.buffer.push("\n  ");
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "topbarView", {hash:{
+    'barActions': ("topActions")
+  },hashTypes:{'barActions': "ID"},hashContexts:{'barActions': depth0},contexts:[depth0],types:["ID"],data:data})));
+  data.buffer.push("\n");
   return buffer;
   }
 
@@ -1523,9 +1508,9 @@ function program5(depth0,data) {
   
   var buffer = '';
   data.buffer.push("\n  ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "cellView", {hash:{
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "view.cellView", {hash:{
     'width': ("width"),
-    'row': ("content"),
+    'row': ("view.content"),
     'column': ("")
   },hashTypes:{'width': "ID",'row': "ID",'column': "ID"},hashContexts:{'width': depth0,'row': depth0,'column': depth0},contexts:[depth0],types:["ID"],data:data})));
   data.buffer.push("\n");
@@ -1597,6 +1582,28 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'type': ("checkbox"),
     'checked': ("checked")
   },hashTypes:{'type': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n");
+  return buffer;
+  
+});
+},{}],46:[function(_dereq_,module,exports){
+"use strict";
+var Ember = window.Ember["default"] || window.Ember;
+exports["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "actionGroupView", {hash:{
+    'class': ("pull-left"),
+    'content': ("leftActions")
+  },hashTypes:{'class': "STRING",'content': "ID"},hashContexts:{'class': depth0,'content': depth0},contexts:[depth0],types:["ID"],data:data})));
+  data.buffer.push("\n");
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "actionGroupView", {hash:{
+    'class': ("pull-right"),
+    'content': ("rightActions")
+  },hashTypes:{'class': "STRING",'content': "ID"},hashContexts:{'class': depth0,'content': depth0},contexts:[depth0],types:["ID"],data:data})));
   data.buffer.push("\n");
   return buffer;
   

@@ -13,7 +13,6 @@ form h4 {
 }
 form input,
 form select {
-  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 10px 0px;
   display: block;
@@ -24,7 +23,6 @@ form select {
 }
 form select {
   border-radius: 0px;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   height: 36px;
   background: #ffffff;
@@ -35,10 +33,8 @@ form .form-group.buttons {
 form .form-group.buttons button.btn {
   margin-top: 30px;
   margin-right: 5px;
-  -webkit-background-clip: border-box !important;
   background-clip: border-box !important;
   border-radius: 0px;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 form .form-group.buttons button.btn:first-of-type {
@@ -57,7 +53,6 @@ form .form-group.buttons button.btn:first-of-type {
 .form-horizontal .form-control {
   border: none;
   border-radius: 0px;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .form-horizontal .form-control-static {
@@ -90,14 +85,12 @@ form .form-group.buttons button.btn:first-of-type {
   background-color: #0074d9;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074d9), color-stop(100% #003d73));
   background-image: -webkit-linear-gradient(top, #0074d9 0%, #003d73 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0074d9), to(#003d73));
   background-image: linear-gradient(top, #0074d9 0%, #003d73 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0074d9, endColorstr=#003d73);
   /*IE<9>*/
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";
   /*IE8+*/
   color: #aaaaaa;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .gc-login-form .login p a {
@@ -108,7 +101,6 @@ form .form-group.buttons button.btn:first-of-type {
   padding-bottom: 8px;
   border-bottom: 1px solid #003d73;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
   box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
 }
 .gc-login-form .login .float {
@@ -178,7 +170,6 @@ form .form-group.buttons button.btn:first-of-type {
 }
 .select2-container .select2-choice {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 0;
   height: 36px;
@@ -187,19 +178,16 @@ form .form-group.buttons button.btn:first-of-type {
 }
 .select2-container .select2-choice .select2-arrow {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border-left: 1px solid #dddddd;
   background-image: none;
   background-color: #f7f7f7;
 }
 .select2-container .select2-choice .select2-arrow b {
-  -webkit-background-size: 60px 60px !important;
   background-size: 60px 60px !important;
 }
 .select2-drop {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .select2-drop .select2-search input {
@@ -211,7 +199,6 @@ form .form-group.buttons button.btn:first-of-type {
 }
 .select2-drop.select2-drop-above {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .select2-drop-active {
@@ -223,7 +210,6 @@ form .form-group.buttons button.btn:first-of-type {
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 0;
   height: 36px;
@@ -243,7 +229,6 @@ form .form-group.buttons button.btn:first-of-type {
 }
 .select2-container-multi .select2-choices .select2-search-choice {
   border-radius: 0;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   margin: 7px 0 7px 8px;
   border: 1px solid #dddddd;
@@ -352,7 +337,6 @@ form .form-group.buttons button.btn:first-of-type {
   padding: 15px 20px;
   width: inherit;
   list-style-type: none;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -385,7 +369,6 @@ form .form-group.buttons button.btn:first-of-type {
   background-color: #40a6ff;
 }
 .gc-sidebar .gc-starter {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px 20px 20px;
@@ -401,7 +384,6 @@ form .form-group.buttons button.btn:first-of-type {
   height: 60px;
   display: block;
   border-radius: 100%;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #0074d9;
   background: #003d73;

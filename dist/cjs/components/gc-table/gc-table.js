@@ -1,6 +1,5 @@
 "use strict";
 var Action = require("./gc-action")["default"] || require("./gc-action");
-var ActionGroup = require("./gc-action-group")["default"] || require("./gc-action-group");
 var Topbar = require("./gc-topbar")["default"] || require("./gc-topbar");
 var Head = require("./gc-head")["default"] || require("./gc-head");
 var Body = require("./gc-body")["default"] || require("./gc-body");
@@ -8,7 +7,6 @@ var Table;
 
 Table = Ember.Component.extend({
   topbarView: Topbar,
-  actionGroupView: ActionGroup,
   headView: Head,
   bodyView: Body,
   init: function() {
