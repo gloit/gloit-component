@@ -1,28 +1,31 @@
 <section class="main">
   <form class="login" {{action 'login' on="submit"}}>
-    <h1>{{view.titleHtmlSafe}}</h1>
+    <h1>
+      <p class="version">{{version}}</p>
+      <p class="title">{{titleHtmlSafe}}</p>
+    </h1>
     <p class="float">
       <label for="identification"><i class="fa fa-user"></i>用户名/邮箱：</label>
-      {{input id='identification' type='text' value=view.identification placeholder='请输入您的用户名/邮箱...' }}
+      {{input id='identification' type='text' value=identification placeholder='请输入您的用户名/邮箱...' }}
     </p>
     <p class="float">
       <label for="password"><i class="fa fa-key"></i>密码：</label>
-      {{input id='password' type='password' value=view.password placeholder='请输入您的密码...' class="showpassword" }}
+      {{input id='password' type='password' value=password placeholder='请输入您的密码...' class="showpassword" }}
     <p class="clearfix"></p>
     <p class="clearfix">
-      {{#if view.registerable}}
+      {{#if registerable}}
         {{#link-to 'registrations.new' class="btn btn-success pull-right"}}
           注册
         {{/link-to}}
       {{/if}}
       <button type="submit" class="btn btn-primary pull-right">登录</button>
     </p>
-    <p>{{view.copyrightHtmlSafe}}</p>
+    <p>{{copyrightHtmlSafe}}</p>
   </form>
 </section>
 <div class="browsers">
   <ul>
-    {{#each view.supportedBrowers}}
+    {{#each supportedBrowers}}
     <li>
       <a target="_blank" {{bind-attr href=url}}>
         <img {{bind-attr src=icon}}/>

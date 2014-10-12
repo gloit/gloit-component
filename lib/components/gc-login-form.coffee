@@ -3,6 +3,7 @@ LoginForm = Ember.Component.extend
 
   title: '用户登录'
   copyright: '&copy; 2011-2014'
+  version: 'v1.0.0'
 
   registerable: false
 
