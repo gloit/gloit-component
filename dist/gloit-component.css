@@ -82,26 +82,30 @@ form .form-group.buttons button.btn:first-of-type {
   padding: 15px;
   border-top: #ff851b 5px solid;
   /* Set the background */
-  background-color: #0074d9;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074d9), color-stop(100% #003d73));
-  background-image: -webkit-linear-gradient(top, #0074d9 0%, #003d73 100%);
-  background-image: linear-gradient(top, #0074d9 0%, #003d73 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0074d9, endColorstr=#003d73);
-  /*IE<9>*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";
-  /*IE8+*/
+  /*.gradient(@base-color, @base-color, lighten(@base-color, -20%));*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%)); [>IE<9><]*/
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";[>IE8+<]*/
   color: #aaaaaa;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /*.box-shadow(0 0 5px rgba(0, 0, 0, .5));*/
 }
 .gc-login-form .login p a {
   color: #ffffff;
 }
 .gc-login-form .login h1 {
-  color: #aaaaaa;
+  color: #ffffff;
   padding-bottom: 8px;
   border-bottom: 1px solid #003d73;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  box-shadow: 0 1px 0 rgba(195, 248, 255, 0.8);
+  /*text-shadow: 0 1px 0 rgba(255,255,255,0.8);*/
+  /*.box-shadow(0 1px 0 rgba(195, 248, 255, 0.80));*/
+}
+.gc-login-form .login h1 .version {
+  font-size: 12px;
+  margin-top: -25px;
+  text-align: right;
+  color: #aaaaaa;
+}
+.gc-login-form .login h1 .title {
+  font-size: 28px;
 }
 .gc-login-form .login .float {
   width: 50%;

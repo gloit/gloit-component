@@ -29,7 +29,7 @@ var Initializer = require("./initializers/gc-initializer")["default"] || require
 
 Ember.Application.initializer(Initializer);
 
-Ember.libraries.register('GloitComponent', '0.1.0');
+Ember.libraries.register('GloitComponent', '0.3.0-pre');
 
 Ember.View.reopen({
   init: function() {
