@@ -71,7 +71,7 @@ define(
       data.buffer.push("\n    <p class=\"clearfix\"></p>\n    <p class=\"clearfix\">\n      ");
       stack1 = helpers['if'].call(depth0, "registerable", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-      data.buffer.push("\n      <button type=\"submit\" class=\"btn btn-primary pull-right\">登录</button>\n    </p>\n    <p>");
+      data.buffer.push("\n      <button type=\"submit\" class=\"btn btn-warning pull-right\">登录</button>\n    </p>\n    <p>");
       stack1 = helpers._triageMustache.call(depth0, "copyrightHtmlSafe", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push("</p>\n  </form>\n</section>\n<div class=\"browsers\">\n  <ul>\n    ");

@@ -7,15 +7,9 @@
     margin: 0 auto;
     padding: 15px;
     border-top: @orange 5px solid;
-    background: @base-color;
-
-    /* Set the background */
-    /*.gradient(@base-color, @base-color, lighten(@base-color, -20%));*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%)); [>IE<9><]*/
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%))";[>IE8+<]*/
+    background: lighten(@base-color, -5%);
 
     color: @gray;
-    /*.box-shadow(0 0 5px rgba(0, 0, 0, .5));*/
     p {
       a {
         color: @white;
@@ -24,9 +18,7 @@
     h1 {
       color: @white;
       padding-bottom: 8px;
-      border-bottom: 1px solid lighten(@base-color, -20%);
-      /*text-shadow: 0 1px 0 rgba(255,255,255,0.8);*/
-      /*.box-shadow(0 1px 0 rgba(195, 248, 255, 0.80));*/
+      border-bottom: 1px solid @sliver;
       .version {
         font-size: 12px;
         margin-top: -25px;
