@@ -81,6 +81,7 @@ form .form-group.buttons button.btn:first-of-type {
   margin: 0 auto;
   padding: 15px;
   border-top: #ff851b 5px solid;
+  background: #0074d9;
   /* Set the background */
   /*.gradient(@base-color, @base-color, lighten(@base-color, -20%));*/
   /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@base-color, endColorstr=lighten(@base-color, -20%)); [>IE<9><]*/
