@@ -756,7 +756,7 @@ Table = Ember.Component.extend({
   },
   tagName: 'table',
   classNames: ['table', 'table-bordered', 'table-hover', 'gc-table'],
-  classNameBindings: ['clickable:table-clickable'],
+  classNameBindings: ['clickable:gc-table-clickable'],
   multiple: false,
   selection: null,
   indexed: false,
