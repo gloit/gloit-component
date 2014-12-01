@@ -12,8 +12,6 @@ Gloit Component是基于Ember开发的基础控件库。支持的浏览器：Goo
   <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.css" />
   <link rel="stylesheet" href="http://cdn.staticfile.org/font-awesome/4.0.3/css/font-awesome.css" />
   <link rel="stylesheet" href="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
-  <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.6/select2.css" />
-  <link rel="stylesheet" href="http://cdn.staticfile.org/select2/3.4.6/select2-bootstrap.css" />
   <link rel="stylesheet" href="http://gloit.github.com/dist/gloit-component.css" />
   <!-- ... -->
 </head>
@@ -34,8 +32,6 @@ Gloit Component是基于Ember开发的基础控件库。支持的浏览器：Goo
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-core.min.js"></script> 
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-button.min.js"></script> 
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-modal.min.js"></script> 
-    <script type="text/javascript" src="http://cdn.staticfile.org/select2/3.4.6/select2.js"></script> 
-    <script type="text/javascript" src="http://cdn.staticfile.org/select2/3.4.6/select2_locale_zh-CN.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> 
     <script type="text/javascript" src="http://www.malot.fr/bootstrap-datetimepicker/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script> 
     <script type="text/javascript" src="http://gloit.github.com/dist/globals/gloit-component.js"></script> 

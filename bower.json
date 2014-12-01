@@ -24,7 +24,6 @@
     "ember-list-view": "http://builds.emberjs.com/list-view/list-view-latest.js",
     "notifier": "https://github.com/Srirangan/notifer.js.git#1.0.0",
     "ember-i18n": "~2.2.1",
-    "select2": "~3.5.1",
     "bootstrap-datetimepicker": "https://github.com/smalot/bootstrap-datetimepicker.git",
     "jquery": "~1.11.1",
     "jquery.browser": "~0.0.6",
