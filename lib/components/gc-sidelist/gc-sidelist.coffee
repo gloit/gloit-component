@@ -1,6 +1,6 @@
 `import Item from './gc-item'`
 
-Sidelist = Ember.ListView.extend
+Sidelist = Ember.CollectionView.extend
   classNames: ['gc-sidelist']
 
   itemViewClass: Item

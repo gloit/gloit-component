@@ -28,7 +28,6 @@ Gloit Component是基于Ember开发的基础控件库。支持的浏览器：Goo
     <script type="text/javascript" src="http://cdn.staticfile.org/ember.js/1.4.0/ember.js"></script> 
     <script type="text/javascript" src="https://raw.githubusercontent.com/jamesarosen/ember-i18n/master/lib/i18n.js"></script> 
     <script type="text/javascript" src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.js"></script> 
-    <script type="text/javascript" src="http://emberjs.com/list-view/javascripts/libs/list-view.js"></script> 
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-core.min.js"></script> 
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-button.min.js"></script> 
     <script type="text/javascript" src="http://ember-addons.github.io/bootstrap-for-ember/dist/js/bs-modal.min.js"></script> 
