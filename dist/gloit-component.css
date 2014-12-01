@@ -163,79 +163,6 @@ form .form-group.buttons button.btn:first-of-type {
   width: 64px;
   height: 64px;
 }
-.select2-container {
-  width: 100%;
-}
-.select2-container .select2-choice {
-  border-radius: 0;
-  background-clip: padding-box;
-  border: 0;
-  height: 36px;
-  line-height: 36px;
-  background-image: none;
-}
-.select2-container .select2-choice .select2-arrow {
-  border-radius: 0;
-  background-clip: padding-box;
-  border-left: 1px solid #dddddd;
-  background-image: none;
-  background-color: #f7f7f7;
-}
-.select2-container .select2-choice .select2-arrow b {
-  background-size: 60px 60px !important;
-}
-.select2-drop {
-  border-radius: 0;
-  background-clip: padding-box;
-}
-.select2-drop .select2-search input {
-  margin-top: 4px;
-  border: 1px solid #dddddd;
-}
-.select2-container-multi .select2-choices .select2-search-field input {
-  padding: 6px 12px;
-}
-.select2-drop.select2-drop-above {
-  border-radius: 0;
-  background-clip: padding-box;
-}
-.select2-drop-active {
-  border: 1px solid #dddddd !important;
-}
-.select2-dropdown-open .select2-choice {
-  background-color: #ffffff;
-}
-.select2-dropdown-open.select2-drop-above .select2-choice,
-.select2-dropdown-open.select2-drop-above .select2-choices {
-  border-radius: 0;
-  background-clip: padding-box;
-  border: 0;
-  height: 36px;
-  line-height: 36px;
-  background-color: #ffffff;
-  background-image: none;
-}
-.select2-dropdown-open.select2-drop-above .select2-choices {
-  line-height: inherit;
-}
-.select2-container-multi .select2-choices {
-  border: 0;
-  background-image: none;
-}
-.select2-container-multi.select2-container-active .select2-choices {
-  border: 0;
-}
-.select2-container-multi .select2-choices .select2-search-choice {
-  border-radius: 0;
-  background-clip: padding-box;
-  margin: 7px 0 7px 8px;
-  border: 1px solid #dddddd;
-  background-image: none;
-  background-color: #f7f7f7;
-}
-.select2-container-multi .select2-choices .select2-search-field input {
-  padding: 7px 8px !important;
-}
 .gc-sidebar {
   background: #0074d9;
   float: left;
@@ -481,6 +408,7 @@ form .form-group.buttons button.btn:first-of-type {
   left: 202px;
 }
 .gc-sidelist {
+  width: 200px;
   position: relative;
   float: left;
   height: 100%;
@@ -489,8 +417,8 @@ form .form-group.buttons button.btn:first-of-type {
   border-right: 1px solid #dddddd;
 }
 .gc-sidelist-item {
-  position: absolute;
-  width: 100%;
+  /*position: absolute;*/
+  /*width: 100%;*/
   min-height: 45px;
   background: #ffffff;
 }

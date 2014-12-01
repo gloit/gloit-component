@@ -17,9 +17,6 @@ var TableTemplate = require("../templates/gc-table")["default"] || require("../t
 
 var SidelistComponent = require("../components/gc-sidelist/gc-sidelist")["default"] || require("../components/gc-sidelist/gc-sidelist");
 
-var Select2Component = require("../components/gc-select2")["default"] || require("../components/gc-select2");
-var TaggingSelect2Component = require("../components/gc-tagging-select2")["default"] || require("../components/gc-tagging-select2");
-
 var RateGaugeChartComponent = require("../components/gc-highcharts/gc-rate-gauge-chart")["default"] || require("../components/gc-highcharts/gc-rate-gauge-chart");
 
 var KindEditorComponent = require("../components/gc-kind-editor")["default"] || require("../components/gc-kind-editor");
@@ -45,9 +42,6 @@ exports["default"] = {
     container.register('component:gc-table', TableComponent);
 
     container.register('component:gc-sidelist', SidelistComponent);
-
-    container.register('component:gc-select2', Select2Component);
-    container.register('component:gc-tagging-select2', TaggingSelect2Component);
 
     container.register('component:gc-rate-gauge-chart', RateGaugeChartComponent);
 

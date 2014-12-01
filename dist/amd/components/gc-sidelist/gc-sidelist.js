@@ -5,7 +5,7 @@ define(
     var Item = __dependency1__["default"] || __dependency1__;
     var Sidelist;
 
-    Sidelist = Ember.ListView.extend({
+    Sidelist = Ember.CollectionView.extend({
       classNames: ['gc-sidelist'],
       itemViewClass: Item,
       didInsertElement: function() {

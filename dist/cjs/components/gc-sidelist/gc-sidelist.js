@@ -2,7 +2,7 @@
 var Item = require("./gc-item")["default"] || require("./gc-item");
 var Sidelist;
 
-Sidelist = Ember.ListView.extend({
+Sidelist = Ember.CollectionView.extend({
   classNames: ['gc-sidelist'],
   itemViewClass: Item,
   didInsertElement: function() {

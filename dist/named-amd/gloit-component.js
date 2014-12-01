@@ -351,42 +351,6 @@ define("gloit-component/components/gc-pagination/gc-pagination",
 
     __exports__["default"] = Pagination;
   });
-define("gloit-component/components/gc-select2",
-  ["exports"],
-  function(__exports__) {
-    "use strict";
-    var Select2;
-
-    Select2 = Ember.Select.extend({
-      classNames: ['gc-select2'],
-      placeholder: '请选择...',
-      allowClear: true,
-      closeOnSelect: true,
-      minimumInputLength: 0,
-      maximumSelectionSize: 0,
-      selectedDidChange: (function() {
-        return this.$().select2('val', this.$().val());
-      }).observes('selection.@each'),
-      didInsertElement: function() {
-        return Ember.run.scheduleOnce('afterRender', this, 'processChildElements');
-      },
-      processChildElements: function() {
-        var options;
-        options = {};
-        options.placeholder = this.get('prompt') || this.get('placeholder');
-        options.allowClear = this.get('allowClear');
-        options.closeOnSelect = this.get('closeOnSelect');
-        options.minimumInputLength = this.get('minimumInputLength');
-        options.maximumSelectionSize = this.get('maximumSelectionSize');
-        return this.$().select2(options);
-      },
-      willDestroyElement: function() {
-        return this.$().select2('destroy');
-      }
-    });
-
-    __exports__["default"] = Select2;
-  });
 define("gloit-component/components/gc-sidebar/gc-brand",
   ["../../templates/gc-sidebar/gc-brand","exports"],
   function(__dependency1__, __exports__) {
@@ -491,13 +455,15 @@ define("gloit-component/components/gc-sidebar/gc-starter",
     __exports__["default"] = Starter;
   });
 define("gloit-component/components/gc-sidelist/gc-item",
-  ["exports"],
-  function(__exports__) {
+  ["../../templates/gc-sidelist/gc-item","exports"],
+  function(__dependency1__, __exports__) {
     "use strict";
+    var layout = __dependency1__["default"] || __dependency1__;
     var Item;
 
-    Item = Ember.ListItemView.extend({
-      classNames: ['gc-sidelist-item']
+    Item = Ember.Component.extend({
+      classNames: ['gc-sidelist-item'],
+      layout: layout
     });
 
     __exports__["default"] = Item;
@@ -509,7 +475,7 @@ define("gloit-component/components/gc-sidelist/gc-sidelist",
     var Item = __dependency1__["default"] || __dependency1__;
     var Sidelist;
 
-    Sidelist = Ember.ListView.extend({
+    Sidelist = Ember.CollectionView.extend({
       classNames: ['gc-sidelist'],
       itemViewClass: Item,
       didInsertElement: function() {
@@ -907,52 +873,9 @@ define("gloit-component/components/gc-table/gc-topbar",
 
     __exports__["default"] = Topbar;
   });
-define("gloit-component/components/gc-tagging-select2",
-  ["exports"],
-  function(__exports__) {
-    "use strict";
-    var TaggingSelect2;
-
-    TaggingSelect2 = Ember.TextField.extend({
-      classNames: ['gc-tagging-select2'],
-      tags: [],
-      placeholder: '请选择...',
-      allowClear: true,
-      closeOnSelect: true,
-      minimumInputLength: 0,
-      maximumSelectionSize: 0,
-      tokenSeparators: [",", " ", ";", "，", "；"],
-      didInsertElement: function() {
-        return Ember.run.scheduleOnce('afterRender', this, 'processChildElements');
-      },
-      processChildElements: function() {
-        var options;
-        options = {
-          placeholder: this.get('placeholder'),
-          allowClear: this.get('allowClear'),
-          closeOnSelect: this.get('closeOnSelect'),
-          tags: this.get('tags') || [],
-          tokenSeparators: this.get('tokenSeparators'),
-          minimumInputLength: this.get('minimumInputLength'),
-          maximumSelectionSize: this.get('maximumSelectionSize')
-        };
-        return this.$().select2(options);
-      },
-      willDestroyElement: function() {
-        return this.$().select2("destroy");
-      },
-      resetSelection: (function() {
-        if (!Ember.isEmpty(this.get('tags'))) {
-          return this.processChildElements();
-        }
-      }).observes('tags.@each')
-    });
-
-    __exports__["default"] = TaggingSelect2;
-  });
 define("gloit-component",
-  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-select2","./components/gc-tagging-select2","./components/gc-highcharts/gc-rate-gauge-chart","./components/gc-kind-editor","./initializers/gc-initializer","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __dependency16__, __dependency17__, __exports__) {
+  ["./components/gc-datetime-picker","./components/gc-login-form","./templates/gc-login-form","./components/gc-main-toolbar","./templates/gc-main-toolbar","./components/gc-pagination/gc-pagination","./components/gc-sidebar/gc-sidebar","./templates/gc-sidebar","./components/gc-table/gc-column-model","./components/gc-table/gc-table","./templates/gc-table","./components/gc-sidelist/gc-sidelist","./components/gc-highcharts/gc-rate-gauge-chart","./components/gc-kind-editor","./initializers/gc-initializer","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -973,14 +896,11 @@ define("gloit-component",
 
     var SidelistComponent = __dependency12__["default"] || __dependency12__;
 
-    var Select2Component = __dependency13__["default"] || __dependency13__;
-    var TaggingSelect2Component = __dependency14__["default"] || __dependency14__;
+    var RateGaugeChartComponent = __dependency13__["default"] || __dependency13__;
 
-    var RateGaugeChartComponent = __dependency15__["default"] || __dependency15__;
+    var KindEditorComponent = __dependency14__["default"] || __dependency14__;
 
-    var KindEditorComponent = __dependency16__["default"] || __dependency16__;
-
-    var Initializer = __dependency17__["default"] || __dependency17__;
+    var Initializer = __dependency15__["default"] || __dependency15__;
 
     Ember.Application.initializer(Initializer);
 
@@ -1011,14 +931,12 @@ define("gloit-component",
     __exports__.TableTemplate = TableTemplate;
     __exports__.TableComponent = TableComponent;
     __exports__.SidelistComponent = SidelistComponent;
-    __exports__.Select2Component = Select2Component;
-    __exports__.TaggingSelect2Component = TaggingSelect2Component;
     __exports__.RateGaugeChartComponent = RateGaugeChartComponent;
     __exports__.KindEditorComponent = KindEditorComponent;
   });
 define("gloit-component/initializers/gc-initializer",
-  ["../components/gc-datetime-picker","../components/gc-login-form","../templates/gc-login-form","../components/gc-main-toolbar","../templates/gc-main-toolbar","../components/gc-pagination/gc-pagination","../components/gc-sidebar/gc-sidebar","../templates/gc-sidebar","../components/gc-table/gc-table","../templates/gc-table","../components/gc-sidelist/gc-sidelist","../components/gc-select2","../components/gc-tagging-select2","../components/gc-highcharts/gc-rate-gauge-chart","../components/gc-kind-editor","exports"],
-  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __dependency14__, __dependency15__, __exports__) {
+  ["../components/gc-datetime-picker","../components/gc-login-form","../templates/gc-login-form","../components/gc-main-toolbar","../templates/gc-main-toolbar","../components/gc-pagination/gc-pagination","../components/gc-sidebar/gc-sidebar","../templates/gc-sidebar","../components/gc-table/gc-table","../templates/gc-table","../components/gc-sidelist/gc-sidelist","../components/gc-highcharts/gc-rate-gauge-chart","../components/gc-kind-editor","exports"],
+  function(__dependency1__, __dependency2__, __dependency3__, __dependency4__, __dependency5__, __dependency6__, __dependency7__, __dependency8__, __dependency9__, __dependency10__, __dependency11__, __dependency12__, __dependency13__, __exports__) {
     "use strict";
     var DatetimePickerComponent = __dependency1__["default"] || __dependency1__;
 
@@ -1038,12 +956,9 @@ define("gloit-component/initializers/gc-initializer",
 
     var SidelistComponent = __dependency11__["default"] || __dependency11__;
 
-    var Select2Component = __dependency12__["default"] || __dependency12__;
-    var TaggingSelect2Component = __dependency13__["default"] || __dependency13__;
+    var RateGaugeChartComponent = __dependency12__["default"] || __dependency12__;
 
-    var RateGaugeChartComponent = __dependency14__["default"] || __dependency14__;
-
-    var KindEditorComponent = __dependency15__["default"] || __dependency15__;
+    var KindEditorComponent = __dependency13__["default"] || __dependency13__;
 
     __exports__["default"] = {
       name: 'gloit-component',
@@ -1066,9 +981,6 @@ define("gloit-component/initializers/gc-initializer",
         container.register('component:gc-table', TableComponent);
 
         container.register('component:gc-sidelist', SidelistComponent);
-
-        container.register('component:gc-select2', Select2Component);
-        container.register('component:gc-tagging-select2', TaggingSelect2Component);
 
         container.register('component:gc-rate-gauge-chart', RateGaugeChartComponent);
 
@@ -1524,6 +1436,37 @@ define("gloit-component/templates/gc-sidebar/gc-starter",
       stack1 = helpers.each.call(depth0, "view.items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push("\n</ul>\n");
+      return buffer;
+      
+    });
+  });
+define("gloit-component/templates/gc-sidelist/gc-item",
+  ["ember","exports"],
+  function(__dependency1__, __exports__) {
+    "use strict";
+    var Ember = __dependency1__["default"] || __dependency1__;
+    __exports__["default"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+    this.compilerInfo = [4,'>= 1.0.0'];
+    helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+      var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+
+    function program1(depth0,data) {
+      
+      var buffer = '', stack1;
+      data.buffer.push("\n  <i ");
+      data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+        'class': ("view.icon")
+      },hashTypes:{'class': "ID"},hashContexts:{'class': depth0},contexts:[],types:[],data:data})));
+      data.buffer.push("></i>\n  ");
+      stack1 = helpers._triageMustache.call(depth0, "view.text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+      data.buffer.push("\n");
+      return buffer;
+      }
+
+      stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "view.route", options) : helperMissing.call(depth0, "link-to", "view.route", options));
+      if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+      data.buffer.push("\n");
       return buffer;
       
     });
