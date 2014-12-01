@@ -1455,16 +1455,16 @@ define("gloit-component/templates/gc-sidelist/gc-item",
       var buffer = '', stack1;
       data.buffer.push("\n  <i ");
       data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-        'class': ("view.icon")
+        'class': ("view.content.icon")
       },hashTypes:{'class': "ID"},hashContexts:{'class': depth0},contexts:[],types:[],data:data})));
       data.buffer.push("></i>\n  ");
-      stack1 = helpers._triageMustache.call(depth0, "view.text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+      stack1 = helpers._triageMustache.call(depth0, "view.content.text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push("\n");
       return buffer;
       }
 
-      stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "view.route", options) : helperMissing.call(depth0, "link-to", "view.route", options));
+      stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "view.content.route", options) : helperMissing.call(depth0, "link-to", "view.content.route", options));
       if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
       data.buffer.push("\n");
       return buffer;
