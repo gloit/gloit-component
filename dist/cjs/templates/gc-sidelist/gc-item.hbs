@@ -1,4 +1,11 @@
-{{#link-to view.content.route}}
-  <i {{bind-attr class=view.content.icon}}></i>
-  {{view.content.text}}
-{{/link-to}}
+{{#if view.content.context}}
+  {{#link-to view.content.route view.content.context}}
+    <i {{bind-attr class=view.content.icon}}></i>
+    {{view.content.text}}
+  {{/link-to}}
+{{else}}
+  {{#link-to view.content.route}}
+    <i {{bind-attr class=view.content.icon}}></i>
+    {{view.content.text}}
+  {{/link-to}}
+{{/if}}
