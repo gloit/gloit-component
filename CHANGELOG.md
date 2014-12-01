@@ -1,5 +1,6 @@
-*Gloit 0.3.0 (2014)*
+*Gloit 0.3.0 (Dec 1, 2014)*
 
+* Change the typo of the login form;
 * Upgrade deps;
 * Add `gc-kindeditor`;
 * Add `gc-rate-gauge-chart`.
@@ -8,7 +9,6 @@
 
 * Rename the repo to gloit-component;
 * Upgraded fontawesome to 4.1.
-
 
 *Gloit 0.1.2 (Jun 2, 2014)*
 
