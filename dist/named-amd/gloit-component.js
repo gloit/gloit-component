@@ -984,7 +984,7 @@ define("gloit-component",
 
     Ember.Application.initializer(Initializer);
 
-    Ember.libraries.register('GloitComponent', '0.3.0-pre');
+    Ember.libraries.register('GloitComponent', '0.3.0');
 
     Ember.View.reopen({
       init: function() {

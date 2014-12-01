@@ -1,7 +1,7 @@
 {
   "name": "gloit-component",
   "namespace": "gloit-component",
-  "version": "0.3.0-pre",
+  "version": "0.3.0",
   "scripts": {
     "postinstall": "bower install"
   },

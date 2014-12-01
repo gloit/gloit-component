@@ -892,7 +892,7 @@ var Initializer = _dereq_("./initializers/gc-initializer")["default"] || _dereq_
 
 Ember.Application.initializer(Initializer);
 
-Ember.libraries.register('GloitComponent', '0.3.0-pre');
+Ember.libraries.register('GloitComponent', '0.3.0');
 
 Ember.View.reopen({
   init: function() {
