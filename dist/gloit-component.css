@@ -217,6 +217,7 @@ form .form-group.buttons button.btn:first-of-type {
 }
 .gc-sidebar .gc-navigator {
   width: inherit;
+  position: relative;
 }
 .gc-sidebar .gc-navigator .menu-items {
   margin: 0 !important;
@@ -257,6 +258,8 @@ form .form-group.buttons button.btn:first-of-type {
   display: block;
 }
 .gc-sidebar .gc-navigator .menu-triggers {
+  position: absolute;
+  bottom: 0;
   margin: 0;
   background-color: #003d73;
   padding: 15px 20px;
