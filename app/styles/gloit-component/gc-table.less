@@ -1,0 +1,32 @@
+.gc-table-top-bar {
+  height: 30px;
+  padding: 5px 8px;
+  border: 1px solid @sliver;
+  border-bottom: none;
+  a {
+    margin-right: 15px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.gc-table-head {
+  background: lighten(@sliver, 10%);
+
+  td.gc-table-head-cell {
+    font-weight: bold;
+    min-width: 100px;
+  }
+
+}
+.gc-table-body {
+  td.index, td.selection-cell {
+    text-align: center;
+    background: lighten(@sliver, 10%);
+  }
+}
+.gc-table-clickable {
+  tbody {
+    tr { cursor: pointer; }
+  }
+}
