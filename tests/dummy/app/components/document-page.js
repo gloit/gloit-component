@@ -12,14 +12,8 @@ export default Ember.Component.extend({
     var self = this;
 
     if (this.get('url')) {
-      var url = this.get('url');
-
-      if (config.environment === 'production') {
-        url = Ember.String.fmt('/gloit-component%@', this.get('url'));
-      }
-
       ajax({
-        url: url
+        url: Ember.String.fmt('%@%@', config.default.baseUrl, this.get('url'))
       }).then(function(result) {
         self.set('body', result);
       });
