@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import ajax from 'ic-ajax';
 
+import config from '../config/environment';
+
 export default Ember.Component.extend({
   classNames: ['document-page'],
   url: null,
@@ -11,7 +13,7 @@ export default Ember.Component.extend({
 
     if (this.get('url')) {
       ajax({
-        url: this.get('url')
+        url: Ember.String.fmt('%@%@', config.baseUrl, this.get('url'))
       }).then(function(result) {
         self.set('body', result);
       });
