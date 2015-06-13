@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import ListView from 'ember-list-view';
 import Item from './gc-sidelist/gc-item';
 
