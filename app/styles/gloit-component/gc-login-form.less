@@ -1,0 +1,94 @@
+.gc-login-form {
+  .main {
+    padding: 60px 0 30px;
+  }
+  .login {
+    width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+    border-top: @orange 5px solid;
+    background: lighten(@base-color, -5%);
+
+    color: @gray;
+    p {
+      a {
+        color: @white;
+      }
+    }
+    h1 {
+      color: @white;
+      padding-bottom: 8px;
+      border-bottom: 1px solid @sliver;
+      .version {
+        font-size: 12px;
+        margin-top: -25px;
+        text-align: right;
+        color: @gray;
+      }
+      .title {
+        font-size: 28px;
+      }
+    }
+    .float {
+      width: 50%;
+      float: left;
+      padding-top: 15px;
+      margin-right: 0px;
+    }
+    label {
+      color: @white;
+      display: block;
+      padding: 0 0 5px 2px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 12px;
+      i {
+        margin-right: 5px;
+        display: inline-block;
+        width: 10px;
+      }
+    }
+    input[type=text],input[type=password] {
+      font-size: 13px;
+      font-weight: 400;
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 2px solid @sliver;
+      color: @black;
+    }
+    button, a.btn {
+      color:  @white;
+      padding: 5px 20px;
+    }
+    input[type=checkbox] {
+      margin-top: 0px;
+    }
+  }
+
+  .browsers {
+    margin: 0 auto;
+    ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        a {
+          width: 100px;
+          margin: 0;
+          div {
+            width: 100px;
+          }
+        }
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+  }
+}
