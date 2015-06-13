@@ -1,9 +1,0 @@
-{{#if multiple}}
-  <td class='selection-cell'>{{input type='checkbox' checked=selected}}</td>
-{{/if}}
-{{#if indexed}}
-  <td class='index'>{{index}}</td>
-{{/if}}
-{{#each columns}}
-  {{view view.cellView width=width row=view.content column=this}}
-{{/each}}
