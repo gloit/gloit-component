@@ -12,8 +12,9 @@ export default Ember.Component.extend({
     var self = this;
 
     if (this.get('url')) {
+      console.log(config);
       ajax({
-        url: Ember.String.fmt('%@%@', config.default.baseUrl, this.get('url'))
+        url: Ember.String.fmt('%@%@', config.baseUrl, this.get('url'))
       }).then(function(result) {
         self.set('body', result);
       });
