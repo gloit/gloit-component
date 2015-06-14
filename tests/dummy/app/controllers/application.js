@@ -11,6 +11,11 @@ export default Ember.Controller.extend({
       { icon: 'fa fa-puzzle-piece', route: 'basics.pagination', text: '分页条' }
     ])
   }, {
+    icon: 'fa fa-flag-o', text: '表单控件',
+    items: Ember.A([
+      { icon: 'fa fa-puzzle-piece', route: 'forms.datetimepicker', text: '日期时间' }
+    ])
+  }, {
     icon: 'fa fa-flag-o', text: '表格控件',
     items: Ember.A([
       { icon: 'fa fa-puzzle-piece', route: 'tables.normal', text: '普通表格' }

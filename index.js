@@ -46,14 +46,30 @@ module.exports = {
     app.import('bower_components/sweetalert/dist/sweetalert.css');
 
     app.import({
-      development: 'bower_components/sweetalert/dist/sweetalert-dev.js',
-      production: 'bower_components/sweetalert/dist/sweetalert.min.js',
+      development: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css',
+      production: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'
     });
+
+    app.import({
+      development: 'bower_components/sweetalert/dist/sweetalert-dev.js',
+      production: 'bower_components/sweetalert/dist/sweetalert.min.js'
+    });
+
+    app.import({
+      development: 'bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js',
+      production: 'bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'
+    });
+
   },
 
   postprocessTree: function(type, tree) {
     return mergeTrees([tree,
                       pickFiles('bower_components/fontawesome/fonts', {
+                        srcDir: '/',
+                        files: ['*.*'],
+                        destDir: '/fonts'
+                      }),
+                      pickFiles('bower_components/bootstrap/fonts', {
                         srcDir: '/',
                         files: ['*.*'],
                         destDir: '/fonts'

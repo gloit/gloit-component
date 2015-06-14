@@ -6,6 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('forms', function() {
+    this.route('datetimepicker', function() {
+      this.route('demo');
+      this.route('doc');
+    });
+  });
+
   this.route('tables', function() {
     this.route('normal', function() {
       this.route('demo');

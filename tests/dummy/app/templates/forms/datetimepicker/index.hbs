@@ -1,0 +1,23 @@
+<div class="demo">
+  <h2>在线演示</h2>
+  <h3>
+    示例
+    {{#link-to 'forms.datetimepicker.doc'}}
+    <span class="pull-right"><i class="fa fa-file-text-o"></i> 说明文档</span>
+    {{/link-to}}
+  </h3>
+  <div class="show">
+    {{#em-form form_layout="horizontal"
+      submit_button=false}}
+      <h3>示例</h3>
+      {{gc-datetimepicker
+      label='日期'
+      format='yyyy-mm-dd'
+      minView=2}}
+
+      {{gc-datetimepicker
+      label='日期时间'
+      format='yyyy-mm-dd hh:ii:ss'}}
+    {{/em-form}}
+  </div>
+</div>
