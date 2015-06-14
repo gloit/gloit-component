@@ -34,7 +34,7 @@ export default Ember.Component.extend({
 
   actions: {
     login: function() {
-      this.sendAction('action');
+      this.sendAction('action', this.get('identification'), this.get('password'));
     }
   }
 });
