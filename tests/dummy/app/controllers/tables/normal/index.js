@@ -97,18 +97,18 @@ export default Ember.Controller.extend({
   singleSelection: new Ember.Set(),
   multipleSelection: new Ember.Set(),
   selectionDidChange: Ember.observer('multipleSelection.length', function() {
-    alert("共选中了" + (this.get('multipleSelection.length')) + "行");
+    swal("共选中了" + (this.get('multipleSelection.length')) + "行");
     return console.log(this.get('multipleSelection'));
   }),
   actions: {
     select: function(obj) {
-      return alert("选中了" + (obj.toString()));
+      return swal("选中了" + (obj.toString()));
     },
     removeSelected: function() {
-      return alert('`移除选中`按钮被点击！');
+      return swal('`移除选中`按钮被点击！');
     },
     removeAll: function() {
-      return alert('`清空`按钮被点击！');
+      return swal('`清空`按钮被点击！');
     }
   }
 });
