@@ -22,6 +22,7 @@
     "numeral": "~1.5.3",
     "toastr": "~2.1.1",
     "sweetalert": "~1.0.1",
-    "ember-cli-moment-shim": "~0.1.0"
+    "ember-cli-moment-shim": "~0.1.0",
+    "googlefonts": "https://github.com/towerhe/googlefonts.git"
   }
 }

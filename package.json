@@ -1,6 +1,6 @@
 {
   "name": "gloit-component",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -19,8 +19,11 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-static-compiler": "^0.2.1",
     "ember-cli": "0.2.7",
     "ember-cli-app-version": "0.3.3",
+    "ember-cli-babel": "^5.0.0",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.0",
     "ember-cli-github-pages": "0.0.6",
@@ -31,12 +34,10 @@
     "ember-cli-moment": "0.0.2",
     "ember-cli-qunit": "0.3.13",
     "ember-cli-uglify": "^1.0.1",
-    "ember-crumbly": "0.2.0",
     "ember-data": "1.0.0-beta.18",
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-list-view": "0.0.6",
     "ember-try": "0.0.6",
     "markdown-code-highlighting": "0.0.3"
   },
@@ -44,7 +45,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "ember-crumbly": "0.2.0",
+    "ember-list-view": "0.0.6"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
