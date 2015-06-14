@@ -24,6 +24,7 @@
     "sweetalert": "~1.0.1",
     "ember-cli-moment-shim": "~0.1.0",
     "googlefonts": "https://github.com/towerhe/googlefonts.git",
-    "bootstrap-datetimepicker": "https://github.com/smalot/bootstrap-datetimepicker.git"
+    "bootstrap-datetimepicker": "https://github.com/smalot/bootstrap-datetimepicker.git",
+    "select2": "3.5.2"
   }
 }
