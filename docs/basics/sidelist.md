@@ -5,7 +5,7 @@
 侧边列表栏被渲染到在其父元素的左侧，主要用来以列表的方式显示一个集合数据类型的信息。其主要效果有鼠标悬浮高亮，当前选中条目高亮，另外还支持延迟渲染功能，即不论集合中存在多少数量的记录（成千上万条），只渲染可视高度能容纳的条数。延迟渲染功能基于[list-view](http://emberjs.com/list-view)实现。
 
 ```handlebars
-{{view 'gc-sidelist' content=model height=100 width=200 rowHeight=45}}
+{{gc-sidelist content=model height=100 width=200 rowHeight=45}}
 ```
 
 ### 参数
@@ -31,7 +31,7 @@ model: Ember.A([
 `gc-sidelist`支持块语法，块中上下文为遍历的某一条目。通过块，可以自定义列表每一条目需要显示的内容、样式等。例如：
 
 ```handlebars
-{{#view 'gc-sidelist' content=model height=100 width=200 rowHeight=45}}
+{{#gc-sidelist content=model height=100 width=200 rowHeight=45}}
   {{#link-to 'user' id}}
     <div class="name">
       {{username}} ({{realname}})
@@ -43,7 +43,7 @@ model: Ember.A([
       {{/if}}
     </div>
   {{/link-to}}
-{{/view}}
+{{/gc-sidelist}}
 ```
 
 `gc-sidelist`渲染的DOM被包裹在一个样式名为`gc-sidelist`的div元素中，如果需要自定义块中内容的样式，那么可以将元素选择器定义至`gc-sidelist`，例如：

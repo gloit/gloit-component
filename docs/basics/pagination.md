@@ -5,7 +5,7 @@
 分页栏是一个用来对集合类数据进行分页浏览的通用组件。组件与数据集合完全解耦，其通过设定一系列关于集合的统计和计数属性来初始化分页栏。为了方便在一个页面中同时使用多个分页栏，采用了基于操作的分页行为控制策略。当用户点击跳转到一个指定分页时，将触发预先设定的分页操作。
 
 ```handlebars
-{{view 'gc-pagination' sizing='large' current=3 start=1 total=10 size=7}}
+{{gc-pagination sizing='large' current=3 start=1 total=10 size=7}}
 ```
 
 ### 参数
