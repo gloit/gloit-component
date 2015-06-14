@@ -46,13 +46,15 @@ module.exports = {
     app.import('bower_components/sweetalert/dist/sweetalert.css');
 
     app.import({
-      development: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css',
-      production: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'
-    });
-
-    app.import({
       development: 'bower_components/sweetalert/dist/sweetalert-dev.js',
       production: 'bower_components/sweetalert/dist/sweetalert.min.js'
+    });
+
+    app.import('bower_components/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js');
+
+    app.import({
+      development: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css',
+      production: 'bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css'
     });
 
     app.import({
