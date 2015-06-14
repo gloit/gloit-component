@@ -23,12 +23,6 @@ module.exports = {
       })
       .then(function() {
         return self.addBowerPackageToProject('sweetalert');
-      })
-      .then(function() {
-        return self.addBowerPackageToProject('https://github.com.com/towerhe/googlefonts.git');
-      })
-      .then(function() {
-        return self.addBowerPackageToProject('https://github.com.com/smalot/bootstrap-datetimepicker.git');
       });
   },
 
