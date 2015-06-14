@@ -5,11 +5,11 @@
   </span>
 </a>
 <ul class="dropdown-menu">
-  {{#each view.items}}
+  {{#each view.items as |item|}}
     <li>
-      {{#link-to route}}
-        <i class={{icon}}></i>
-        {{text}}
+      {{#link-to item.route}}
+        <i class={{item.icon}}></i>
+        {{item.text}}
       {{/link-to}}
     </li>
   {{/each}}

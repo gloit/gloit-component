@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'li',
-  templateName: 'components/gc-pagination/gc-button',
+  layoutName: 'components/gc-pagination/gc-button',
 
   classNameBindings: ['disabled:disabled', 'active:active'],
 

@@ -1,17 +1,18 @@
 <div class="menu-items">
-  {{#each view.menus}}
-    <ul id={{text}} class={{active}}>
-      {{#each items}}
-        <li title={{text}} data-placement="right" data-toggle="tooltip">
-          {{#link-to route}}
+  {{#each view.menus as |menu|}}
+    <ul id={{menu.text}} class={{menu.active}}>
+      {{#each menu.items as |item|}}
+        <li title={{item.text}} data-placement="right" data-toggle="tooltip">
+          {{#link-to item.route}}
             <div>
               {{#if view.expanded}}
-              <div class="title pull-left">{{text}}</div>
+              <div class="title pull-left">{{item.text}}</div>
               {{/if}}
-              {{#if iconUrl}}
-                <img class="{{if view.expanded 'pull-right'}}" src={{iconUrl}} />
+              {{#if item.iconUrl}}
+                <img class="{{if view.expanded 'pull-right'}}"
+                src={{item.iconUrl}} />
               {{else}}
-                <i class="{{icon}} {{if view.expanded 'pull-right'}}"></i>
+                <i class="{{item.icon}} {{if view.expanded 'pull-right'}}"></i>
               {{/if}}
             </div>
           {{/link-to}}
@@ -21,15 +22,16 @@
   {{/each}}
 </div>
 <ul class="menu-triggers">
-  {{#each view.menus}}
-    <li class={{active}} title={{text}} data-placement="right" data-toggle="tooltip">
-      <a href="#{{unbound text}}" data-toggle="tab" {{action 'triggerMenu' this}}>
-        {{#if iconUrl}}
-          <img class="menu-trigger" src={{iconUrl}} />
+  {{#each view.menus as |menu|}}
+    <li class={{menu.active}} title={{menu.text}} data-placement="right" data-toggle="tooltip">
+      <a href="#{{unbound menu.text}}" data-toggle="tab" {{action
+        'triggerMenu' menu}}>
+        {{#if menu.iconUrl}}
+          <img class="menu-trigger" src={{menu.iconUrl}} />
         {{else}}
-          <i class="{{icon}}" class="pull-right"></i>
+          <i class="{{menu.icon}}" class="pull-right"></i>
         {{/if}}
-        <div class="title">{{text}}</div>
+        <div class="title">{{menu.text}}</div>
       </a>
     </li>
   {{/each}}

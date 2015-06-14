@@ -26,11 +26,11 @@
 </section>
 <div class="browsers">
   <ul>
-    {{#each supportedBrowers}}
+    {{#each supportedBrowers as |browser|}}
     <li>
-      <a target="_blank" {{bind-attr href=url}}>
-        <img {{bind-attr src=icon}}/>
-        <div>{{name}}</div>
+      <a target="_blank" href={{browser.url}}>
+        <img src={{browser.icon}} />
+        <div>{{browser.name}}</div>
       </a>
     </li>
     {{/each}}
