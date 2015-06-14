@@ -1,0 +1,5 @@
+{{#if hasTopActions}}
+  {{view topbarView barActions=topActions}}
+{{/if}}
+{{view headView content=headContent hasIndexCell=indexed hasSelectAllCell=multiple}}
+{{view bodyView columns=columns content=content indexed=indexed rowSelectable=rowSelectable multiple=multiple selection=selection}}

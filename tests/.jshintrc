@@ -22,7 +22,8 @@
     "currentURL",
     "currentPath",
     "currentRouteName",
-    "alert"
+    "alert",
+    "moment"
   ],
   "node": false,
   "browser": false,

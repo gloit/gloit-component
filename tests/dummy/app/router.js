@@ -6,6 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('tables', function() {
+    this.route('normal', function() {
+      this.route('demo');
+      this.route('doc');
+    });
+  });
+
   this.route('basics', function() {
     this.route('login-form', function() {
       this.route('demo');

@@ -1,0 +1,9 @@
+{{#if multiple}}
+  <td class='selection-cell'>{{input type='checkbox' checked=selected}}</td>
+{{/if}}
+{{#if indexed}}
+  <td class='index'>{{index}}</td>
+{{/if}}
+{{#each columns as |col|}}
+  {{view view.cellView width=col.width row=view.content column=col}}
+{{/each}}

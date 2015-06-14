@@ -1,0 +1,26 @@
+<div class="demo">
+  <h2>在线演示</h2>
+  <h3>
+    示例
+    {{#link-to 'tables.normal.doc'}}
+    <span class="pull-right"><i class="fa fa-file-text-o"></i> 说明文档</span>
+    {{/link-to}}
+  </h3>
+  <div class="show table">
+    <h3>基础配置</h3>
+    {{gc-table columns=columns content=content indexed=true}}
+
+    <h3>单选表格</h3>
+    {{gc-table columns=columns content=content
+    indexed=true
+    topActions=topActions rowSelectable=true
+    selection=singleSelection}}
+
+    <h3>多选表格</h3>
+    {{gc-table columns=columns
+    content=content indexed=true
+    topActions=topActions
+    rowSelectable=true multiple=true
+    selection=multipleSelection}}
+  </div>
+</div>

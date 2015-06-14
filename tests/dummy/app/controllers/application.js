@@ -10,6 +10,11 @@ export default Ember.Controller.extend({
       { icon: 'fa fa-puzzle-piece', route: 'basics.sidelist', text: '列表栏' },
       { icon: 'fa fa-puzzle-piece', route: 'basics.pagination', text: '分页条' }
     ])
+  }, {
+    icon: 'fa fa-flag-o', text: '表格控件',
+    items: Ember.A([
+      { icon: 'fa fa-puzzle-piece', route: 'tables.normal', text: '普通表格' }
+    ])
   }]),
 
   starterItems: Ember.A([
