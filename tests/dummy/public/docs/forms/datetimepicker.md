@@ -2,10 +2,10 @@
 
 ### 描述
 
-`{{gc-datetimepicker}}`组件是基于[bootstrap-datetimepicker](http://www.malot.fr/bootstrap-datetimepicker/index.php)实现的日期时间选择器。
+`{{gc-em-datetimepicker}}`组件是基于[bootstrap-datetimepicker](http://www.malot.fr/bootstrap-datetimepicker/index.php)实现的日期时间选择器。
 
 ```handlebars
-{{gc-datetimepicker label='日期时间' format='yyyy-mm-dd hh:ii' autoclose=true todayBtn=true
+{{gc-em-datetimepicker label='日期时间' format='yyyy-mm-dd hh:ii' autoclose=true todayBtn=true
 startDate='1949-10-01' minuteStep=10 minView=0 maxView=4}}
 ```
 
