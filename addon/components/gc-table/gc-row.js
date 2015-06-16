@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   indexedBinding: 'parentView.indexed',
   columnsBinding: 'parentView.columns',
   index: Ember.computed('contentIndex', {
-    get() {
+    get: function() {
       return this.get('contentIndex') + 1;
     }
   })

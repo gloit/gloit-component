@@ -27,12 +27,12 @@ export default Ember.Component.extend({
   topActions: [],
   hasTopActions: Ember.computed.notEmpty('topActions'),
   clickable: Ember.computed('multiple', 'rowSelectable', {
-    get() {
+    get: function() {
       return !this.get('multiple') && this.get('rowSelectable');
     }
   }),
   headContent: Ember.computed('columns.@each', 'indexed', {
-    get() {
+    get: function() {
       var headContent;
       headContent = Ember.A();
       headContent.pushObject(this.get('columns') || []);

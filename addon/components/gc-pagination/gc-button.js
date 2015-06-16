@@ -9,14 +9,14 @@ export default Ember.Component.extend({
   currentBinding: 'parentView.current',
 
   disabled: Ember.computed('current', 'content.{page,text}', {
-    get() {
+    get: function() {
       var page = this.get('content.page');
       return page !== this.get('content.text') && page === this.get('current');
     }
   }),
 
   active: Ember.computed('current', 'content.{page,text}', {
-    get() {
+    get: function() {
       var page = this.get('content.page');
       return page === this.get('content.text') && page === this.get('current');
     }

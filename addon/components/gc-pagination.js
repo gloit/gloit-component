@@ -16,7 +16,7 @@ export default Ember.CollectionView.extend({
   url: '',
 
   sizingClassName: Ember.computed('sizing', {
-    get() {
+    get: function() {
       if (this.get('sizing') === 'large') {
         return 'pagination-lg';
       }
@@ -30,25 +30,25 @@ export default Ember.CollectionView.extend({
   }),
 
   prev: Ember.computed('current', {
-    get() {
+    get: function() {
       return this.get('current') > 1 ? this.get('current') - 1 : 1;
     }
   }),
 
   next: Ember.computed('current', 'total', {
-    get() {
+    get: function() {
       return this.get('current') < this.get('total') ? this.get('current') + 1 : this.get('total');
     }
   }),
 
   end: Ember.computed('start', 'total', {
-    get() {
+    get: function() {
       return this.get('start') + this.get('size') - 1 >= this.get('total') ? this.get('total') : this.get('start') + this.get('size') - 1;
     }
   }),
 
   content: Ember.computed('start', 'end', 'current', {
-    get() {
+    get: function() {
       var content = Ember.A();
       content.pushObject(Ember.Object.create({ page: 1, text: Ember.String.htmlSafe('&laquo;') }));
       content.pushObject(Ember.Object.create({ page: this.get('prev'), text: Ember.String.htmlSafe('&lsaquo;') }));

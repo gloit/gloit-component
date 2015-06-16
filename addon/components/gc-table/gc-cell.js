@@ -22,7 +22,7 @@ export default Ember.Component.extend(styleBindings, {
     var valuePath = 'row.' + this.get('column.cellContentPath');
 
     Ember.defineProperty(this, 'value', Ember.computed(valuePath, {
-      get() {
+      get: function() {
         return formatValue ? formatValue.call(this, this.get(valuePath)) : this.get(valuePath);
       }
     }));

@@ -5,7 +5,7 @@ export default Ember.Component.extend({
 
   title: '用户登录',
   copyright: Ember.computed({
-    get() {
+    get: function() {
       return Ember.String.fmt('&copy; 2011-%@', new Date().getYear() + 1900);
     }
   }),
@@ -17,13 +17,13 @@ export default Ember.Component.extend({
   action: 'authenticate',
 
   titleHtmlSafe: Ember.computed('title', {
-    get() {
+    get: function() {
       return Ember.String.htmlSafe(this.get('title'));
     }
   }),
 
   copyrightHtmlSafe: Ember.computed('copyright', {
-    get() {
+    get: function() {
       return Ember.String.htmlSafe(this.get('copyright'));
     }
   }),

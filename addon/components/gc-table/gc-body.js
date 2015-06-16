@@ -9,7 +9,7 @@ export default Ember.CollectionView.extend({
   classNames: ['gc-table-body'],
 
   itemViewClass: Ember.computed('rowSelectable', 'multiple', {
-    get() {
+    get: function() {
       if (!this.get('rowSelectable')) {
         return Row;
       }
@@ -32,7 +32,7 @@ export default Ember.CollectionView.extend({
   columns: [],
 
   single: Ember.computed('rowSelectable', 'multiple', {
-    get() {
+    get: function() {
       return !this.get('multiple') && this.get('rowSelectable');
     }
   })

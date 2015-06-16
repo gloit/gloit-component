@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   imageUrl: null,
 
   logo: Ember.computed('name', 'imageUrl', {
-    get() {
+    get: function() {
       if (this.get('imageUrl')) {
         return Ember.String.htmlSafe(Ember.String.fmt("<img src='%@' />", this.get('imageUrl')));
       }
