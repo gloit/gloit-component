@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ajax from 'ic-ajax';
+import ajax from 'ember-ajax';
 
 import config from '../config/environment';
 
