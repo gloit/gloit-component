@@ -1,18 +1,18 @@
 <div class="menu-items">
-  {{#each view.menus as |menu|}}
+  {{#each menus as |menu|}}
     <ul id={{menu.text}} class={{menu.active}}>
       {{#each menu.items as |item|}}
         <li title={{item.text}} data-placement="right" data-toggle="tooltip">
           {{#link-to item.route}}
             <div>
-              {{#if view.expanded}}
+              {{#if expanded}}
               <div class="title pull-left">{{item.text}}</div>
               {{/if}}
               {{#if item.iconUrl}}
-                <img class="{{if view.expanded 'pull-right'}}"
+                <img class="{{if expanded 'pull-right'}}"
                 src={{item.iconUrl}} />
               {{else}}
-                <i class="{{item.icon}} {{if view.expanded 'pull-right'}}"></i>
+                <i class="{{item.icon}} {{if expanded 'pull-right'}}"></i>
               {{/if}}
             </div>
           {{/link-to}}
@@ -22,7 +22,7 @@
   {{/each}}
 </div>
 <ul class="menu-triggers">
-  {{#each view.menus as |menu|}}
+  {{#each menus as |menu|}}
     <li class={{menu.active}} title={{menu.text}} data-placement="right" data-toggle="tooltip">
       <a href="#{{unbound menu.text}}" data-toggle="tab" {{action
         'triggerMenu' menu}}>

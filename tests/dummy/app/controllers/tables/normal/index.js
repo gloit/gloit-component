@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import ColumnModel from 'gloit-component/components/gc-table/gc-column-model';
-
+import moment from 'moment'
 export default Ember.Controller.extend({
   columns: Ember.computed(function() {
     var closeColumn, dateColumn, formatPrice, highColumn, lowColumn, openColumn;
@@ -98,7 +98,7 @@ export default Ember.Controller.extend({
   multipleSelection: new Ember.Set(),
   selectionDidChange: Ember.observer('multipleSelection.length', function() {
     swal("共选中了" + (this.get('multipleSelection.length')) + "行");
-    return console.log(this.get('multipleSelection'));
+    return Ember.debug(this.get('multipleSelection'));
   }),
   actions: {
     select: function(obj) {

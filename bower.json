@@ -1,8 +1,9 @@
 {
   "name": "gloit-component",
   "dependencies": {
-    "animate.css": "~3.3.0",
-    "sweetalert": "~1.0.1",
+    "animate.css": "~3.5.2",
+    "bootstrap": "~3.3.7",
+    "sweetalert": "2.1.0",
     "googlefonts": "https://github.com/towerhe/googlefonts.git"
   }
 }

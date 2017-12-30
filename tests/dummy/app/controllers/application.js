@@ -15,16 +15,16 @@ export default Ember.Controller.extend({
     items: Ember.A([
       { icon: 'fa fa-puzzle-piece', route: 'forms.datetimepicker', text: '日期时间' }
     ])
-  }, {
-    icon: 'fa fa-flag-o', text: '表格控件',
-    items: Ember.A([
-      { icon: 'fa fa-puzzle-piece', route: 'tables.normal', text: '普通表格' }
-    ])
+  // }, {
+  //   icon: 'fa fa-flag-o', text: '表格控件',
+  //   items: Ember.A([
+  //   //  { icon: 'fa fa-puzzle-piece', route: 'tables.normal', text: '普通表格' }
+  //   ])
   }]),
 
   starterItems: Ember.A([
-    { icon: 'fa fa-user', route: '', text: '个人信息' },
-    { icon: 'fa fa-key', route: '', text: '修改密码' },
-    { icon: 'fa fa-sign-out', route: '', text: '注销' }
+    // { icon: 'fa fa-user', route: '', text: '个人信息' },
+    // { icon: 'fa fa-key', route: '', text: '修改密码' },
+    // { icon: 'fa fa-sign-out', route: '', text: '注销' }
   ])
 });
